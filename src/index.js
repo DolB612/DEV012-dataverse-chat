@@ -17,4 +17,5 @@ TODO:
 2.- Pasar "root element" a router.
 3.- Invocar el router para renderizar la vista correcta.
 */
-console.log("hola, esta es una prueba")
+console.log("hola, esta es una prueba");
+console.log("prueba oficial");
