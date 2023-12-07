@@ -1,19 +1,27 @@
-// En este archivo definirás tus rutas e importarás los componentes que vas a renderizar.
+import { Home } from './views/Home.js';
+import { Panel } from './views/Panel.js';
+import { Pilot } from './views/Pilot.js';
+import { ApiKey } from './views/ApiKey.js';
+import { ErrorView } from './views/ErrorView.js';
 
-/*
-import Example from './views/Example.js';
+import { setRootElement, setRoutes, onURLChange } from './router.js';
 
-Ejemplo de definición de rutas:
-
+// Define your routes and their associated views
 const routes = {
-    "/": Example,
-    ...
-}
-*/
+  '/': Home,
+  '/panel': Panel,
+  '/pilot': Pilot,
+  '/apikey': ApiKey,
+  '/error': ErrorView,
+};
 
-/*
-TODO:
-1.- Definir rutas en router.
-2.- Pasar "root element" a router.
-3.- Invocar el router para renderizar la vista correcta.
-*/
+const viewContainer = document.getElementById('root');
+// Assign the routes
+setRoutes(routes);
+setRootElement(viewContainer);
+
+// Set the root element where views will be rendered
+window.addEventListener("DOMContentLoaded", (event) => {
+    onURLChange(event.currentTarget.location.pathname, {});
+    console.log(event.currentTarget);
+});
