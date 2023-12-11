@@ -15,10 +15,12 @@ const routes = {
   '/error': ErrorView,
 };
 
-const viewContainer = document.getElementById('root');
+const containerRoot = document.querySelector("#root");
+//containerRoot.appendChild(renderItems(arrayPilots));
+
 // Assign the routes
 setRoutes(routes);
-setRootElement(viewContainer);
+setRootElement(containerRoot);
 
 // Set the root element where views will be rendered
 window.addEventListener("DOMContentLoaded", (event) => {
