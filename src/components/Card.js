@@ -15,7 +15,6 @@ const Card = (driver) => {
         </dl>
       `;
   
-      
     return li;
   };
 
