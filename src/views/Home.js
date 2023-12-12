@@ -1,8 +1,10 @@
-import allData from '../data/dataset.js'
+import data from '../data/dataset.js'
 import Card from '../components/card.js';
 import Header from '../components/header.js';
 import Statistics from '../components/statistics.js';
 import Footer from '../components/Footer.js';
+import Navbar from '../components/navbar.js';
+
 
 export const Home = () => {
     const container = document.createElement('span')
@@ -13,11 +15,12 @@ export const Home = () => {
     h2.classList.add("subtitle");
 
   
-    allData.forEach((driver) => { 
+    data.forEach((driver) => { 
         ul.appendChild(Card(driver));
     })
 
-    container.append(Header(), Statistics(), h2,  ul, Footer());
+    container.append(Header(), Navbar(), Statistics(), h2,  ul, Footer());
 
     return container;
 };
+    
