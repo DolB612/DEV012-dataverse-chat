@@ -1,6 +1,6 @@
 const Card = (driver) => {
       const li = document.createElement("li");
-      li.classList.add("list"); // Rubi: Agrega la clase "list" (Confirmar porque no funciona)
+      li.classList.add("list");
       li.setAttribute("itemscope", "");
       li.setAttribute("itemtype", "PilotsF1");
       li.setAttribute("data-id", driver.id);
