@@ -10,5 +10,5 @@ const Statistics = () => {
     divStats.appendChild(estadistica);
     return divStats;
 }
-// Modificamos el export y utilizamos el export default
+
 export default Statistics;
