@@ -21,101 +21,85 @@ body{
     --grey-light: #999999;
   }
 
-/* Contenedor principal */
-#flex-container {
+.header {
     display: flex;
+    background-color: var(--white-color);
+    padding: 10px;
 }
 
-/* Aside */
+.header .title {
+    color: var(--red-color);
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+}
+
+.header .logo-f1 {
+    width: 150px;
+    height: 50px;
+}
+
+/* Navbar */
 .navbar{
-    background: var(--grey-color);
+    background: var(--red-color);
     display: flex; 
     align-items: center; 
     justify-content: center; 
-     
+    padding: 15px;
 }
-
 
 .navbar label {
-            margin-bottom: 25px;
-            margin-top: 15px;
-
-        }
-.navbar select {
-            width: 100%;
-            margin-bottom: 15px;
-            background-color: var(--red-color);
-            color: var(--white-color);
-            border: none;
-            padding: 10px 15px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-.navbar button {
-            width:100%;
-            background-color: var(--grey-color);
-            color: var(--white-color);
-            border: none;
-            padding: 10px 5px;
-            border-radius: 15px;
-            cursor: pointer;
-            align-items: center;
-            margin-top:40px;
-        }
-.navbar button:hover {
-            box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
-            font-weight: bold;
-        }
-.navbar .imagen-footer {
-            margin-top: 11vh;
-            width: 100%;
-            height: auto;
-            bottom: 0;
-            position: relative;
-        }
-
-
-/* Content */
-.content {
-    width: 100%;
-    height: 100vh; 
+    color: var(--white-color);
+    margin-right: 5px;
 }
 
-.header {
-    height: 10%; 
-    background-color: var(--red-color);
-    color: var(--white-color);
-    text-align: center;
-    font-size: 1.2em;
+.navbar select {
+            background-color: var(--grey-blue);
+            width: 250px;
+            height: 35px;
+            color: var(--white-color);
+            border-radius: 10px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+.navbar button {
+            background-color: var(--grey-blue);
+            color: var(--white-color);
+            width: 150px;
+            height: 35px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            align-items: center;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+.navbar button:hover {
+    background-color: var(--white-color);
+    color: var(--red-color);
+    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
 }
 
 .subtitle {
-    height: 5%; 
     color: var(--grey-color);
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .computeStats {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5%;
-    background-color: #37353588;
+    background-color: var(--red-color);
     color: var(--white-color);
     text-align: center;
     font-size: 1.1em;
 } 
 
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10%; 
-    background-color: var(--red-color);
-    color: var(--white-color);
-    text-align: center;
-}
 
 /* Cards */
 #root {
@@ -172,17 +156,17 @@ ul {
     color: var(--red-color);
 }
 
+/* Footer */
+.footer{
+    height: 50px;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
 /* Media Querys*/ 
 @media screen and (max-width: 768px){
-    .cajaMenu {
-       position: absolute;
-       display: none;
-    }
-    .haflWidth {
-        width: 80%;
-        display: flex;
-    }
-    header {
+    .header {
         height: auto;
         padding-left: 1.2;
     }
@@ -194,20 +178,4 @@ ul {
         height: auto;
     } 
 
-    div.cajaMenu>aside.menu>button{
-        margin-top:40vh;
-        padding: 15px 5px;
-    }
-
-    div.cajaMenu>aside.menu>img.imagen-footer{
-        display: flex;
-        margin: 0 auto;
-        width: 45%;
-        height: auto;
-        margin-top: 4vh;
-    }
-
 }
-
-
-

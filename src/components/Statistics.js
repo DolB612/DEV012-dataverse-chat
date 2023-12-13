@@ -5,7 +5,7 @@ const Statistics = () => {
     estadistica.textContent = 'Promedio de Podios: ';
     let spanStats = document.createElement("span");
     spanStats.textContent = '--';
-    spanStats.setAttribute("averagePodiums", "");
+    spanStats.setAttribute("id", "averagePodiums"); // Corregir aquí
     estadistica.appendChild(spanStats);
     divStats.appendChild(estadistica);
     return divStats;
