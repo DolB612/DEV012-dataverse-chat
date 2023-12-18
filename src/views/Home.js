@@ -23,17 +23,6 @@ export const Home = () => {
         });
     };
 
-    // Función para actualizar estadísticas
-    const updateStats = (drivers) => {
-        // Calcula el promedio de podiums utilizando la función computeStats
-        const averagePodiumsElement = document.getElementById("averagePodiums");
-        
-        if (averagePodiumsElement) {
-            const averagePodiums = computeStats(drivers);
-            averagePodiumsElement.textContent = averagePodiums;
-        }
-    };
-          
     // Inicializar con todos los datos
     let currentData = [...data];
     renderCards(currentData);
@@ -62,6 +51,17 @@ export const Home = () => {
         updateStats(dataOrdenada);
     });
 
+       // Función para actualizar estadísticas
+       const updateStats = (drivers) => {
+        // Calcula el promedio de podiums utilizando la función computeStats
+        const averagePodiumsElement = document.getElementById("averagePodiums");
+        
+        if (averagePodiumsElement) {
+            const averagePodiums = computeStats(drivers);
+            averagePodiumsElement.textContent = averagePodiums;
+        }
+    };
+    
     // Borrar
     const clearButton = container.querySelector('[data-testid="button-clear"]');
     clearButton.addEventListener('click', () => {

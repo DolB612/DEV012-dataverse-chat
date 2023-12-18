@@ -1,8 +1,8 @@
 // Función que filtra datos según un criterio dado
 export const filterData = (data, filterBy, value) => {
-  return data.filter((object) => {
+  return data.filter((item) => {
     // Verifica si el objeto tiene la propiedad 'facts' y su valor coincide con el criterio dado
-    if (object.facts && object.facts[filterBy] === value) {
+    if (item.facts && item.facts[filterBy] === value) {
       return true;
     }
     return false;
