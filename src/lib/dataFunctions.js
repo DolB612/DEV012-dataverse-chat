@@ -1,36 +1,37 @@
-// Función para filtrar por escudería (team)
+// Función que filtra datos según un criterio dado
 export const filterData = (data, filterBy, value) => {
-  const result = data.filter((item) => item.facts[filterBy] === value);
-  return result;
+  return data.filter((object) => {
+    // Verifica si el objeto tiene la propiedad 'facts' y su valor coincide con el criterio dado
+    if (object.facts && object.facts[filterBy] === value) {
+      return true;
+    }
+    return false;
+  });
 };
 
-// Función para ordenar (ascendente o descendente)
-export const sortData = (data, sortBy, sortOrder) => {
-  // Verificamos si el orden es ascendente (A - Z) o descendente (Z - A)
-  const orderFactor = sortOrder === "asc" ? 1 : -1;
-  // Utilizamos el método sort() para ordenar los datos según el campo especificado (sortBy)
-  data.sort((a, b) => {
-    const itemA = a[sortBy].toLowerCase(); // Convertimos a minúsculas para una comparación insensible a mayúsculas
-    const itemB = b[sortBy].toLowerCase();
-
-    if (itemA < itemB) {
-      return -1 * orderFactor;
+// Función que ordena datos según un criterio y un orden dado
+export function sortData(data, sortBy, sortOrder) {
+  // Realiza una copia superficial de los datos para no afectar el array original
+  return data.slice().sort((a, b) => {
+    // Si se está ordenando por "name"
+    if (sortBy === "name") {
+      // Ordena alfabéticamente de manera ascendente o descendente según el sortOrder
+      return sortOrder === "asc" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name);
     }
-    if (itemA > itemB) {
-      return 1 * orderFactor;
-    }
+    // Si no se está ordenando por "name", no se realiza ninguna modificación
     return 0;
   });
+}
 
-  return data;
-};
-
-// Función estadística
+// Función que calcula y devuelve el promedio de podiums en los datos dados
 export const computeStats = (data) => {
-  // Calcula el promedio de podios
-  const podiums = data.map((item) => item.extraInfo.podiums);
+  // Extrae el número de podiums para cada objeto en los datos
+  const podiums = data.map((item) => item.extraInfo && item.extraInfo.podiums || 0);
+  
+  // Calcula el total de podiums y el promedio redondeado a dos decimales
   const totalPodiums = podiums.reduce((acc, podium) => acc + podium, 0);
   const averagePodiums = totalPodiums / data.length;
-  const roundedAveragePodiums = averagePodiums.toFixed(2); // Redondea el promedio a dos decimales
-  return Number(roundedAveragePodiums);
+  const roundedAveragePodiums = Number(averagePodiums.toFixed(2));
+
+  return roundedAveragePodiums;
 };
