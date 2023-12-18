@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&family=Poppins&family=Titillium+Web&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Titillium Web, Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--white-color);
+}
+
+:root {
+    --black-color: #000000;
+    --grey-color: #38383F;
+    --red-color: #E10600;
+    --white-color: #FFFFFF;
+    /* Nuevos colores: */
+    --grey-blue: #15151E;
+    --grey-light: #999999;
+  }
+
+.header {
+    display: flex;
+    background-color: var(--white-color);
+    padding: 10px;
+}
+
+.header .title {
+    color: var(--red-color);
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+}
+
+.header .logo-f1 {
+    width: 150px;
+    height: 50px;
+}
+
+/* Navbar */
+.navbar{
+    background: var(--red-color);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 15px;
+}
+
+.navbar label {
+    color: var(--white-color);
+    margin-right: 5px;
+}
+
+.navbar select {
+            background-color: var(--grey-blue);
+            width: 250px;
+            height: 35px;
+            color: var(--white-color);
+            border-radius: 10px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+.navbar button {
+            background-color: var(--grey-blue);
+            color: var(--white-color);
+            width: 150px;
+            height: 35px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            align-items: center;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+.navbar button:hover {
+    background-color: var(--white-color);
+    color: var(--red-color);
+    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.subtitle {
+    color: var(--grey-color);
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.computeStats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    text-align: center;
+    font-size: 1.1em;
+} 
+
+
+/* Cards */
+#root {
+    width: 100%;
+    overflow: auto; 
+    height: 70%;
+}
+
+/* HTML Dinámico */
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+.list { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.root-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    margin: 40px;
+    overflow: hidden;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+[itemscope] img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 25px;
+}
+
+[itemprop="name"] {
+    width: 80%;
+    font-weight: bolder;
+    background-color: var(--grey-color);
+    padding: 8px;
+}
+
+[itemprop="lastTeam"] {
+    font-weight: bolder;
+    color: var(--red-color);
+}
+
+/* Footer */
+.footer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: var(--red-color);
+    color: var(--white-color);
+
+}
+
+/* Media Querys*/ 
+@media screen and (max-width: 768px){
+    .header {
+        height: auto;
+        padding-left: 1.2;
+    }
+    .subtitle {
+        height: auto; 
+    }
+    
+    .computeStats {
+        height: auto;
+    } 
+
+}
