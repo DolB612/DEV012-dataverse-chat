@@ -37,8 +37,6 @@ const Navbar = () => {
  
     <button data-testid="button-clear">Eliminar</button>
 
-    <img src="./data/images/New_era_F1_logo.png" alt="Logo formula 1" class="imagen-footer">
-
     `
     return nav;
 }

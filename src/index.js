@@ -1,93 +1,32 @@
+// Importa las vistas desde sus respectivos archivos
 import { Home } from './views/Home.js';
 import { Panel } from './views/Panel.js';
 import { Pilot } from './views/Pilot.js';
 import { ApiKey } from './views/ApiKey.js';
 import { ErrorView } from './views/ErrorView.js';
 
+// Importa funciones del router
 import { setRootElement, setRoutes, onURLChange } from './router.js';
-import { filterData, sortData, computeStats } from '../lib/dataFunctions.js';
-import data from './data/dataset.js'
 
-// Define your routes and their associated views
+// Define las rutas y sus vistas asociadas
 const routes = {
-  '/': Home,
-  '/panel': Panel,
-  '/pilot': Pilot,
-  '/apikey': ApiKey,
-  '/error': ErrorView,
+  '/': Home,          // Ruta principal
+  '/panel': Panel,    // Ruta para el panel
+  '/pilot': Pilot,    // Ruta para el piloto
+  '/apikey': ApiKey,  // Ruta para la API Key
+  '/error': ErrorView, // Ruta para la vista de error
 };
 
-//Estamos probando
-let arrayPilots = [...data];
-let sortOption = null; // Para mantener el estado de la opción de ordenamiento
-
+// Obtiene el elemento raíz del contenedor en el DOM
 const containerRoot = document.querySelector("#root");
-containerRoot.appendChild(renderItems(arrayPilots));
 
-// Assign the routes
+// Asigna las rutas
 setRoutes(routes);
+// Establece el elemento raíz donde se renderizarán las vistas
 setRootElement(containerRoot);
 
-// Set the root element where views will be rendered
+// Establece el elemento raíz y maneja el cambio de URL al cargar la página
 window.addEventListener("DOMContentLoaded", (event) => {
     onURLChange(event.currentTarget.location.pathname, {});
     console.log(event.currentTarget);
-});
-
-
-
-// DOM Estadística inicial
-updateAveragePodiums(arrayPilots);
-// Función para actualizar el promedio de podios
-function updateAveragePodiums(data) {
-  const averagePodiumsElement = document.querySelector("#averagePodiums");
-  const averagePodiums = computeStats(data);
-  averagePodiumsElement.textContent = averagePodiums;
-}
-
-
-// DOM filtrar
-const filter = document.querySelector("#select-filter");
-filter.addEventListener("change", function (event) {
-  const selectedValue = event.target.value;
-  if (selectedValue === "Todos") {
-    arrayPilots = [...data];
-  } else {
-    arrayPilots = filterData(data, "lastTeam", selectedValue);
-  }
-  if (sortOption) {
-    arrayPilots = sortData(arrayPilots, sortOption);
-  }
-  containerRoot.innerHTML = "";
-  containerRoot.appendChild(renderItems(arrayPilots));
-
-  // Actualizar la estadística
-  updateAveragePodiums(arrayPilots);
-});
-
-
-
-// DOM Order
-const order = document.querySelector("#sort-order");
-order.addEventListener("change", function (event) {
-  arrayPilots = sortData(arrayPilots, "name", event.target.value);
-  containerRoot.innerHTML = "";
-  containerRoot.appendChild(renderItems(arrayPilots));
-  // Rubi: probando estadistica
-  updateAveragePodiums(arrayPilots);
-});
-
-// DOM limpiar (reiniciar la aplicación)
-const clearButton = document.querySelector('[data-testid="button-clear"]');
-clearButton.addEventListener("click", function () {
-  // Restablece los filtros y ordenamientos
-  filter.value = "Todos";
-  order.value = "nonOrder";
-
-  arrayPilots = [...data];
-  sortOption = null;
-  containerRoot.innerHTML = "";
-  containerRoot.appendChild(renderItems(arrayPilots));
-  // Probando estadistica
-  updateAveragePodiums(arrayPilots);
 });
