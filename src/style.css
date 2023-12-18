@@ -12,25 +12,32 @@ body{
 }
 
 :root {
-    --black-color: #000000;
-    --grey-color: #38383F;
     --red-color: #E10600;
     --white-color: #FFFFFF;
-    /* Nuevos colores: */
+    --black-color: #000000;
     --grey-blue: #15151E;
+    --grey-color: #38383F;
     --grey-light: #999999;
   }
 
+/* Contenedor Padre */
+#root {
+    width: 100%;
+    overflow: auto; 
+}
+
 .header {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--white-color);
-    padding: 10px;
+    padding: 5px;
 }
 
 .header .title {
     color: var(--red-color);
     text-align: center;
-    font-size: 2em;
+    font-size: 48px;
     margin: auto;
 }
 
@@ -51,6 +58,7 @@ body{
 .navbar label {
     color: var(--white-color);
     margin-right: 5px;
+    font-size: 18px;
 }
 
 .navbar select {
@@ -59,9 +67,10 @@ body{
             height: 35px;
             color: var(--white-color);
             border-radius: 10px;
-            margin-right: 10px;
+            margin-right: 20px;
             border: none;
             cursor: pointer;
+            font-size: 16px;
         }
 
 .navbar button {
@@ -75,6 +84,7 @@ body{
             align-items: center;
             margin-left: 15px;
             font-weight: bold;
+            font-size: 16px;
         }
 
 .navbar button:hover {
@@ -87,7 +97,8 @@ body{
 .subtitle {
     color: var(--grey-color);
     text-align: center;
-    font-size: 1.5em;
+    font-size: 32px;
+    padding: 10px;
 }
 
 .computeStats {
@@ -97,18 +108,10 @@ body{
     background-color: var(--red-color);
     color: var(--white-color);
     text-align: center;
-    font-size: 1.1em;
+    font-size: 18px;
 } 
 
-
 /* Cards */
-#root {
-    width: 100%;
-    overflow: auto; 
-    height: 70%;
-}
-
-/* HTML Dinámico */
 ul {
     display: flex;
     justify-content: center;
@@ -120,7 +123,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
 }
 
 .root-list {
@@ -129,10 +131,10 @@ ul {
     align-items: center;
     text-align: center;
     width: 250px;
-    margin: 40px;
+    margin: 40px; 
     overflow: hidden;
     color: var(--white-color);
-    background-color: var(--black-color);
+    background-color: var(--grey-blue);
     box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
     border-radius: 5px;
 }
@@ -158,14 +160,13 @@ ul {
 
 /* Footer */
 .footer{
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
     background-color: var(--red-color);
     color: var(--white-color);
-
+    height: 70px;
+    font-size: 1.1em;
 }
 
 /* Media Querys*/ 
@@ -183,3 +184,35 @@ ul {
     } 
 
 }
+
+/* Error 4040 Page */
+.containerError {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-blue);
+    width: 100vw;
+    height: 100vh;
+}
+
+.titleError{
+    text-align: center;
+    color: var(--white-color);
+}
+
+.subtitleError{
+    text-align: center;
+    color: var(--white-color);
+}
+
+.textMessage {
+    text-align: center;
+    color: var(--white-color);
+}
+
+.errorButton {
+    background-color: var(--red-color);
+    color: var(--white-color);
+    font-size: 20px;
+}
+
