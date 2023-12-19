@@ -37,6 +37,8 @@ const Navbar = () => {
  
     <button data-testid="button-clear">Eliminar</button>
 
+    <button id="apikeyButton">Api Key</button>
+
     `
     return nav;
 }
