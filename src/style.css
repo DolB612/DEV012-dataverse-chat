@@ -94,28 +94,6 @@ body{
     font-weight: bold;
 }
 
-/* Botón ApiKey */
-#apikeyButton { 
-    background-color: var(--white-color);
-    color: var(--red-color);
-    width: 150px;
-    height: 35px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    align-items: center;
-    margin-left: 15px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-#apikeyButton:hover {
-    background-color: var(--grey-blue);
-    color: var(--white-color);
-    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-}
-
 .subtitle {
     color: var(--grey-color);
     text-align: center;
@@ -127,11 +105,40 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--red-color);
+    background-color: var(--grey-light);
     color: var(--white-color);
     text-align: center;
     font-size: 18px;
 } 
+
+/* Componente Nav */
+.nav {
+    background-color: var(--red-color);
+}
+
+.elementNav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logowhite {
+    width: 150px;
+    height: 50px;
+}
+
+#panelButton {
+    width: 180px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+#apikeyButton {
+    width: 180px;
+    height: 40px;
+    border-radius: 12px;
+}
+
 
 /* Cards */
 ul {
@@ -192,22 +199,6 @@ ul {
     font-size: 1.1em;
 }
 
-/* Media Querys*/ 
-@media screen and (max-width: 768px){
-    .header {
-        height: auto;
-        padding-left: 1.2;
-    }
-    .subtitle {
-        height: auto; 
-    }
-    
-    .computeStats {
-        height: auto;
-    } 
-
-}
-
 /* Error 4040 Page */
 .containerError {
     display: flex;
@@ -237,4 +228,21 @@ ul {
     background-color: var(--red-color);
     color: var(--white-color);
     font-size: 20px;
+}
+
+
+/* Media Querys*/ 
+@media screen and (max-width: 768px){
+    .header {
+        height: auto;
+        padding-left: 1.2;
+    }
+    .subtitle {
+        height: auto; 
+    }
+    
+    .computeStats {
+        height: auto;
+    } 
+
 }

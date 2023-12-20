@@ -16,7 +16,7 @@ const Card = (driver) => {
       <dt></dt><dd itemprop="name">${driver.name}</dd>
       <dt></dt><dd itemprop="placeOfBirth">${driver.facts.placeOfBirth}</dd>
       <dt></dt><dd itemprop="lastTeam">${driver.facts.lastTeam}</dd>
-      <dt></dt><dd itemprop="championshipsWon">Campeonatos: ${driver.extraInfo.championshipsWon}</dd>
+      <dt></dt><dd itemprop="podiums">Podios: ${driver.extraInfo.podiums}</dd>
     </dl>
   `;
 
