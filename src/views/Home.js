@@ -2,7 +2,7 @@ import data from '../data/dataset.js'
 import Card from '../components/card.js';
 import Header from '../components/header.js';
 import Statistics from '../components/Statistics.js';
-import Footer from '../components/Footer.js';
+import Footer from '../components/footer.js';
 import Navbar from '../components/navbar.js';
 
 import { sortData, filterData, computeStats } from '../lib/dataFunctions.js';

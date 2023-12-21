@@ -2,7 +2,7 @@ export default [
     {
         "id": "ayrton-senna",
         "name": "Ayrton Senna",
-        "shortDescription": "Ayrton Senna, el legendario piloto brasileño de Fórmula 1, un ícono del deporte con 3 campeonatos y 80 podios",
+        "shortDescription": "El legendario piloto brasileño de Fórmula 1, un ícono del deporte con 3 campeonatos y 80 podios.",
         "description": "Inolvidable piloto brasileño, nació en São Paulo en 1960 y dejó una huella imborrable en el automovilismo. Considerado uno de los mejores pilotos de la historia, su destreza en la pista era legendaria. Senna no solo era un maestro detrás del volante, sino también un icono fuera de la pista. Durante su tiempo con el equipo McLaren, logró un asombroso récord de 80 podios y ganó tres campeonatos mundiales, asegurando su lugar en la historia de la Fórmula 1 como un verdadero campeón y una inspiración eterna para los amantes del automovilismo.",
         "imageUrl": "https://github.com/rubiestram/DEV012-dataverse/blob/main/src/data/images/ayrton_senna.png?raw=true",
         "facts": {

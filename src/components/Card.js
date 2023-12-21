@@ -8,7 +8,7 @@ const Card = (driver) => {
   li.setAttribute("data-id", driver.id);
 
   // Evento clic para las tarjetas
-  li.addEventListener("click", () => redirectToDetailView(driver.id));
+  li.addEventListener("click", () => redirectToDetailView(driver));
 
   li.innerHTML = `
     <dl class="root-list" itemscope itemtype="PilotsF1">
@@ -24,11 +24,12 @@ const Card = (driver) => {
 };
 
 // Función para redirigir a la vista 
-const redirectToDetailView = (driverId) => {
+const redirectToDetailView = (driver) => {
   // URL a la que será redireccionado utilizando id unico
-  const detailViewUrl = `/pilot/${driverId}`; 
+  const detailViewUrl = `/pilot`; 
+  console.log(detailViewUrl);
   // Redirigir a la vista 
-  navigateTo(detailViewUrl); // Utilizamos la función navigateTo del router
+  navigateTo(detailViewUrl, driver); // Utilizamos la función navigateTo del router
 };
 
 export default Card;
