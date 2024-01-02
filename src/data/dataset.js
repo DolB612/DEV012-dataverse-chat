@@ -411,7 +411,7 @@ export default [
     {
         "id": "charles-leclerc",
         "name": "Charles Leclerc",
-        "shortDescription": "joven piloto monegasco de Fórmula 1, es una de las promesas más brillantes del deporte, compitiendo para Ferrari",
+        "shortDescription": "Joven piloto monegasco de Fórmula 1, es una de las promesas más brillantes del deporte, compitiendo para Ferrari",
         "description": "Debutó en 2018 con Sauber y en 2019 se unió a Ferrari, donde ha deslumbrado con su estilo de conducción agresivo y valentía en situaciones complicadas. Su capacidad para competir en la lucha por el campeonato lo convierte en uno de los pilotos más emocionantes de la parrilla. A pesar de su juventud, Leclerc ya ha dejado una marca significativa en la Fórmula 1 y promete un futuro brillante en el deporte de motor, siendo una fuente de emoción para los fanáticos de todo el mundo.",
         "imageUrl": "https://github.com/rubiestram/DEV012-dataverse/blob/main/src/data/images/charles_leclerc.png?raw=true",
         "facts": {
@@ -445,7 +445,7 @@ export default [
     {
         "id": "nico-rosberg",
         "name": "Nico Rosberg",
-        "shortDescription": "Ex piloto alemán de Fórmula 1, conocido por ganar el campeonato mundial en 2016 y su rivalidad con Lewis Hamilton.",
+        "shortDescription": "Piloto alemán de Fórmula 1, conocido por ganar el campeonato mundial en 2016 y su rivalidad con Lewis Hamilton.",
         "description": "Hijo del campeón mundial Keke Rosberg, siguió los pasos de su padre en la Fórmula 1. En 2016, alcanzó la cima al ganar el campeonato mundial, superando a su feroz rival Lewis Hamilton. Su estilo de conducción calculador y dedicación al deporte lo llevaron al éxito. Sorprendió al mundo al anunciar su retiro inmediato después de lograr su sueño de campeón, dejando un legado de determinación y excelencia. Su contribución al automovilismo es admirada, y su rivalidad con Hamilton es parte fundamental de la historia de la Fórmula 1.",
         "imageUrl": "https://github.com/rubiestram/DEV012-dataverse/blob/main/src/data/images/nico_rosberg.png?raw=true",
         "facts": {
@@ -496,7 +496,7 @@ export default [
     {
         "id": "jean-alesi",
         "name": "Jean Alesi",
-        "shortDescription": "Es admirado por su estilo agresivo y su pasión por las carreras.",
+        "shortDescription": "Jean Alesi, es admirado por su estilo agresivo y su pasión por las carreras.",
         "description": "Es un nombre venerado en el automovilismo. Su carrera en la Fórmula 1 comenzó en 1989 con Tyrrell y lo llevó a competir para equipos icónicos como Ferrari y Benetton. Alesi era conocido por su estilo de conducción agresivo y su pasión innegable por las carreras. Aunque no ganó un campeonato mundial, dejó una huella duradera en el deporte con su tenacidad y dedicación. Su popularidad entre los fanáticos perdura, y su legado como uno de los pilotos más queridos en la Fórmula 1 es innegable.",
         "imageUrl": "https://github.com/rubiestram/DEV012-dataverse/blob/main/src/data/images/jean_alesi.png?raw=true",
         "facts": {
@@ -753,7 +753,7 @@ export default [
       {
         "id": "logan-sargeant",
         "name": "Logan Sargeant",
-        "shortDescription": "joven piloto estadounidense de automovilismo con un futuro prometedor en la Fórmula 1.",
+        "shortDescription": "Joven piloto estadounidense de automovilismo con un futuro prometedor en la Fórmula 1.",
         "description": "Talentoso piloto de automovilismo nacido en St. Petersburg, Florida, que ha llamado la atención con su ascendente carrera en el deporte. Sus inicios en el karting sentaron las bases de su éxito, y desde entonces ha demostrado su destreza en las categorías de monoplazas. Compitiendo en campeonatos como la Fórmula 3, Fórmula 2 y Formula 1, Sargeant ha acumulado experiencia y habilidades al volante. Su futuro promete seguir siendo brillante en el automovilismo, y muchos esperan verlo en la Fórmula 1 en un futuro cercano.",
         "imageUrl": "https://github.com/rubiestram/DEV012-dataverse/blob/main/src/data/images/logan_sargeant.png?raw=true",
         "facts": {

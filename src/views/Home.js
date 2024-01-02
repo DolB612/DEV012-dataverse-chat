@@ -74,5 +74,3 @@ export const Home = () => {
 
     return container;
 };
-
-

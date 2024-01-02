@@ -2,12 +2,14 @@ const Nav = () => {
     const nav = document.createElement('header');
     nav.classList.add("nav");
     nav.innerHTML=`
+    
+    <a href="/">
+        <img src="./assets/f1_logo.svg" alt="Logo F1" class="logowhite">
+    </a>
+
     <div class="elementNav">
-        <a href="/">
-            <img src="./assets/f1_logo.svg" alt="Logo F1" class="logowhite">
-        </a>
-        <button id="panelButton">Panel de Pilotos</button>
-        <button id="apikeyButton">Api Key</button>
+        <button name="panelButton">Panel de Pilotos</button>
+        <button name="apikeyButton">Api Key</button>
     </div>
     `
     return nav;
