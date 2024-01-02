@@ -159,10 +159,13 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: var(--red-color);
     color: var(--white-color);
-    height: 70px;
-    font-size: 1.1em;
+    height: 60px;
+    font-size: 18px;
 }
 
 /* Componente Nav */
@@ -289,7 +292,7 @@ ul {
 .boxMessage {
     background-color: var(--grey-verylight);
     width: 100%;
-    height: 300px;
+    height: 338px;
 }
 
 .buttonMessage {
@@ -297,7 +300,7 @@ ul {
 }
 
 [name="boxchat"] {
-    width: 90%;
+    width: 100%;
     height: 50px;
     border: none;
     background-color: var(--white-color);
@@ -314,6 +317,7 @@ ul {
     font-size: 16px; 
     border-top-left-radius: 10px;
 }
+
 /*Vista ApiKey*/ 
 .contentApiKey {
     display: flex;

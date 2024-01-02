@@ -8,7 +8,7 @@ import Navbar from '../components/navbar.js';
 import { sortData, filterData, computeStats } from '../lib/dataFunctions.js';
 
 export const Home = () => {
-    const container = document.createElement('span')
+    const container = document.createElement('div');
     const ul = document.createElement("ul");
     // Subtitulo
     const h2 = document.createElement('h2');
