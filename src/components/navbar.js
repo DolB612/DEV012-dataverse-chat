@@ -2,6 +2,7 @@ const Navbar = () => {
   const nav = document.createElement("nav"); 
   nav.classList.add("navbar");
   nav.innerHTML = `
+  <div class="contentLabelSelect">
   <label for="select-filter">Filtra por:</label>
   <select id="select-filter" data-testid="select-filter" name="lastTeam">
     <option value="Todos">Escuderias</option>
@@ -33,9 +34,12 @@ const Navbar = () => {
   </select>
   
   <button data-testid="button-clear">Eliminar</button>
-
-  <button id="panelButton">Panel de Pilotos</button>
-  <button id="apikeyButton">Api Key</button>
+  </div>
+  
+  <div class="elementNav">
+  <button name="panelButton">Panel de Pilotos</button>
+  <button name="apikeyButton">Api Key</button>
+  </div>
   `
   return nav;
 }
