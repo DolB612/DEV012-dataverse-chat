@@ -16,7 +16,7 @@ const requestBody = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": "Bearer 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" 
+      "Authorization": "Bearer AQUI VA LA APIKEY" 
     },
     body: JSON.stringify(requestBody)
   })
