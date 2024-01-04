@@ -7,10 +7,9 @@ export const ErrorView = () => {
   <p class="textMessage">Nuestros ingenieros están trabajando en la pista digital para resolver cualquier problema técnico. 
   ¡Mientras tanto, mantén la calma en el pit y espera a que el semáforo digital te dé luz verde de nuevo!
   </p>
-  <a href="http://localhost:3000/">
+  <a href="/">
   <button class="errorButton">Volver a la carrera</button>
   </a>
   `;
-
   return containerError;
 };

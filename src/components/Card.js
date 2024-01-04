@@ -26,8 +26,7 @@ const Card = (driver) => {
 // Función para redirigir a la vista 
 const redirectToDetailView = (driver) => {
   // URL a la que será redireccionado utilizando id unico
-  const detailViewUrl = `/pilot`; 
-  console.log(detailViewUrl);
+  const detailViewUrl = `/pilot`;
   // Redirigir a la vista 
   navigateTo(detailViewUrl, driver); // Utilizamos la función navigateTo del router
 };

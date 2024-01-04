@@ -3,7 +3,6 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: Titillium Web, Arial, Helvetica, sans-serif;
 }
 
@@ -21,11 +20,19 @@ body{
     --grey-verylight: #ebebeb;
   }
 
+
+/* Home */
+.container {
+    min-height: 100vh;
+    position: relative;
+}
+
 .header {
     display: flex;
     align-items: center;
     background-color: var(--white-color);
     height: 50px;
+    padding: 5px;
 }
 
 .logo-f1 {
@@ -35,58 +42,17 @@ body{
 }
 
 .title {
-    margin-left: 310px;
+    margin: auto; /* Revisar - Ajustar con px */
     color: var(--red-color);
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
 }
 
-
-/* Navbar */
-.navbar{
-    display: flex; 
-    justify-content: space-around; /* Revisar */
-    align-items: center; 
-    background: var(--red-color);
-    padding: 10px;
-}
-
-.navbar label {
-    color: var(--white-color);
-    margin-right: 5px;
-    font-size: 16px;
-}
-
-.navbar select {
-            background-color: var(--red-color);
-            width: 160px;
-            height: 30px;
-            color: var(--white-color);
-            margin-right: 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-[data-testid="button-clear"] {
-            background-color: var(--red-color);
-            color: var(--white-color);
-            width: 140px;
-            height: 30px;
-            border-radius: 10px;
-            border-color: #ffffffa6;
-            cursor: pointer;
-            align-items: center;
-            margin-left: 20px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-[data-testid="button-clear"]:hover {
-    box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 0.245);
-    font-weight: bold;
+.subtitle {
+    color: var(--grey-color);
+    text-align: center;
+    font-size: 28px;
 }
 
 .computeStats {
@@ -96,14 +62,21 @@ body{
     background-color: var(--grey-light);
     color: var(--white-color);
     text-align: center;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
 } 
 
-.subtitle {
-    color: var(--grey-color);
-    text-align: center;
-    font-size: 26px;
+/* Footer */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    height: 60px;
+    font-size: 18px;
 }
 
 /* Cards */
@@ -126,7 +99,7 @@ ul {
     align-items: center;
     text-align: center;
     width: 250px;
-    margin: 40px; 
+    margin: 43px; 
     overflow: hidden;
     color: var(--white-color);
     background-color: var(--grey-blue);
@@ -143,30 +116,78 @@ ul {
 }
 
 [itemprop="name"] {
-    width: 80%;
-    font-weight: bolder;
-    background-color: var(--grey-color);
-    padding: 8px;
-}
-
-[itemprop="lastTeam"] {
-    font-weight: bolder;
-    color: var(--red-color);
-}
-
-/* Footer */
-.footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--red-color);
-    color: var(--white-color);
-    height: 60px;
+    width: 80%;
+    height: 35px;
+    font-weight: bolder;
+    background-color: var(--grey-color);
+    padding: 1px;
     font-size: 18px;
 }
+
+[itemprop="placeOfBirth"] {
+    font-size: 16px;
+}
+
+[itemprop="podiums"] {
+    font-size: 16px;
+}
+
+[itemprop="lastTeam"] {
+    font-weight: bold;
+    color: var(--red-color);
+    font-size: 16px;
+}
+
+
+/* Navbar */
+.navbar{
+    display: flex; 
+    justify-content: space-around; /* Revisar */
+    align-items: center; 
+    background: var(--red-color);
+    padding: 10px;
+}
+
+.navbar label {
+    color: var(--white-color);
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.navbar select {
+            background-color: var(--red-color);
+            width: 160px;
+            height: 30px;
+            color: var(--white-color);
+            margin-right: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+[data-testid="button-clear"] {
+            background-color: var(--red-color);
+            color: var(--white-color);
+            width: 140px;
+            height: 30px;
+            border-radius: 10px;
+            border-color: #ffffff7f;
+            cursor: pointer;
+            align-items: center;
+            margin-left: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+[data-testid="button-clear"]:hover {
+    box-shadow: 1px 1px 4px 4px rgba(255, 255, 255, 0.184);
+    font-weight: bold;
+}
+
 
 /* Componente Nav */
 .nav {
@@ -195,7 +216,7 @@ ul {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 20px;
 }
 
@@ -212,16 +233,15 @@ ul {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 [name="apikeyButton"]:hover {
     box-shadow: rgba(255, 255, 255, 0.515) 0px 0px 1px 1px;
+    font-weight: bold;
 }
 
-
-/* Error 4040 Page */
+/* Error 404 Page */
 .containerError {
     display: flex;
     justify-content: center;
@@ -286,7 +306,7 @@ ul {
 }
 
 /* Revisar como darle estilo al nombre del
-   piloto y su descripción corta
+   piloto y su descripción corta 
  */
 
 .boxMessage {
@@ -307,15 +327,20 @@ ul {
 }
 
 [placeholder="Mensaje"] {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .buttonSend {
     width: 10%;
     background-color: var(--grey-blue);
     color: var(--white-color);
-    font-size: 16px; 
+    font-size: 18px; 
     border-top-left-radius: 10px;
+}
+
+.buttonSend:hover {
+    font-size: 20px;
+    color: var(--red-color);
 }
 
 /*Vista ApiKey*/ 
@@ -335,13 +360,12 @@ ul {
 
 .apiKeyInput {
     width: 40%;
-    height: 40px;
+    height: 30px;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid var(--grey-light);
     border-radius: 8px;
-    font-size: 16px;
-    display: block;
+    font-size: 18px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -358,7 +382,7 @@ ul {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 20px;
 }
 
@@ -375,7 +399,7 @@ ul {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
 }
 

@@ -4,16 +4,17 @@ import Header from '../components/header.js';
 import Statistics from '../components/Statistics.js';
 import Footer from '../components/footer.js';
 import Navbar from '../components/navbar.js';
-
 import { sortData, filterData, computeStats } from '../lib/dataFunctions.js';
 
 export const Home = () => {
     const container = document.createElement('div');
+    container.classList.add("container");
+
     const ul = document.createElement("ul");
-    // Subtitulo
-    const h2 = document.createElement('h2');
-    h2.textContent = 'Desde Fangio hasta Verstappen, pasando por leyendas como Lauda y Senna.';
-    h2.classList.add("subtitle");
+    const h2 = document.createElement("h2");
+    h2.innerHTML = `
+    <h2 class="subtitle">Desde Fangio hasta Verstappen, pasando por leyendas como Lauda y Senna.</h2>
+    `
 
     // Función para renderizar tarjetas
     const renderCards = (drivers) => {
@@ -66,7 +67,6 @@ export const Home = () => {
     const clearButton = container.querySelector('[data-testid="button-clear"]');
     clearButton.addEventListener('click', () => {
         filtro.value = "Todos";
-        ordenar.value = "nonOrder";
         currentData = [...data];
         renderCards(currentData);
         updateStats(currentData);
