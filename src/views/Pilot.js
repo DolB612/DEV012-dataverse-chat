@@ -1,5 +1,6 @@
 import Nav from "../components/nav.js";
 import Footer from "../components/footer.js";
+import { openIAapi } from "../lib/openIaApi.js";
 
 export const Pilot = (props) => {
     const containerPilot = document.createElement('div');
@@ -23,8 +24,21 @@ export const Pilot = (props) => {
     <button class="buttonSend">Enviar</button>
     </section>
     `;
-
+// Esto se agregó
     containerPilot.append(Nav(), contentChat, Footer());
-
+    contentChat.querySelector('.buttonSend').addEventListener('click', ()=>{
+        contentChat.querySelector('.boxMessage').append(`<p>${contentChat.querySelector('input[name="boxchat"]').value}</p>`)
+        //console.log(props.name, contentChat.querySelector('input[name="boxchat"]').value);
+    openIAapi(props.name, contentChat.querySelector('input[name="boxchat"]').value)
+    //    .then((responseOpenAI) => responseOpenAI.json())
+    //   .then((responseJSObject) => {
+    //     console.log(responseJSObject);
+    //     console.log(responseJSObject.choices);
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error:', error);
+    //   });
+    })
+    
     return containerPilot;
-};
+}; 
