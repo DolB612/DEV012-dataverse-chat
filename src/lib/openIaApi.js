@@ -1,7 +1,7 @@
 import data from '../data/dataset.js';
 
 export const openIAapi = (piloto, texto) => {
-  const apiKey = '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';  // Reemplaza 'tu_clave_de_api' con tu clave real
+  const apiKey = '';  // Reemplaza 'tu_clave_de_api' con tu clave real
 
   const data = {
     "model": "gpt-3.5-turbo",
