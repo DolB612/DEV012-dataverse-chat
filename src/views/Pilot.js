@@ -44,7 +44,7 @@ export const Pilot = (props) => {
                 boxMessage.innerHTML += `<p>${userMessage}</p>`;
 
                 // Llama a la API de OpenAI con la API Key del usuario
-                openIAapi(storedApiKey, props.name, userMessage)
+                openIAapi(props.name, userMessage)
                     .then((responseOpenAI) => {
                         if (!responseOpenAI.ok) {
                             throw new Error(`API request failed with status ${responseOpenAI.status}`);

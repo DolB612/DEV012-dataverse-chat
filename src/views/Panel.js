@@ -12,7 +12,6 @@ export const Panel = () => {
     <section>Chat Grupal</section> 
     `;
 
-
     containerPanel.append(Nav(),contentChatGroup, Footer());
 
     return containerPanel;

@@ -9,14 +9,13 @@ export const ApiKey = () => {
     contentApikey.classList.add("contentApiKey");  
     contentApikey.innerHTML = `
         <p class="apiKeyText">Administra la API KEY</p>
-        <input class="apiKeyInput" type="text" name="apiKey" placeholder="Ingresa la Api Key">
+        <input class="apiKeyInput" type="text" name="key" placeholder="Ingresa la Api Key">
         <div class="apiKeyButtons">
             <button class="apiKeyButtonSave" name="apiKeyButtonSave">Guardar</button>
             <button class="apiKeyButtonDelete" name="apiKeyButtonDelete">Eliminar</button>
         </div>
     `;
 
-    // Evento click para los botones
     const saveButton = contentApikey.querySelector('.apiKeyButtonSave');
     const deleteButton = contentApikey.querySelector('.apiKeyButtonDelete');
 
