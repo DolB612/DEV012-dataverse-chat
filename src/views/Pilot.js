@@ -28,8 +28,7 @@ export const Pilot = (props) => {
     const storedApiKey = localStorage.getItem('apiKey');
     
     if (!storedApiKey) {
-      // El mensaje se agrega al final de la vista (REVISAR Y CORREGIR)
-        contentChat.innerHTML += "<p>Para interactuar con el chat, primero ingresa tu API Key en la página correspondiente.</p>";
+      alert("Para interactuar con el chat, primero ingresa tu API Key en la página correspondiente.");
     } else {
         // Obtén elementos relevantes del contenido del chat
         const boxMessage = contentChat.querySelector('.boxMessage');
