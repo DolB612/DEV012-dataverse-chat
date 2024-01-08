@@ -16,7 +16,33 @@ export const ApiKey = () => {
         </div>
     `;
 
+    // Evento click para los botones
+    const saveButton = contentApikey.querySelector('.apiKeyButtonSave');
+    const deleteButton = contentApikey.querySelector('.apiKeyButtonDelete');
+
+    // Manejador del evento para el botón de guardar
+    saveButton.addEventListener("click", function() {
+        const apiKeyInput = contentApikey.querySelector('.apiKeyInput');
+        const apiKey = apiKeyInput.value.trim();
+
+        if (apiKey !== "") {
+            // Guarda la API Key en el localStorage
+            localStorage.setItem('apiKey', apiKey);
+            alert('API Key guardada correctamente.');
+        } else {
+            alert('Ingresa una API Key válida.');
+        }
+    });
+
+    // Manejador del evento para el botón de eliminar
+    deleteButton.addEventListener("click", function() {
+        // Elimina la API Key del localStorage
+        localStorage.removeItem('apiKey');
+        alert('API Key eliminada correctamente.');
+    });
+
+    // Agrega componentes al contenedor principal
     containerApikey.append(Nav(), contentApikey, Footer());
 
     return containerApikey;
-};
+}
