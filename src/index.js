@@ -10,11 +10,11 @@ import { setRootElement, setRoutes, onURLChange } from './router.js';
 
 // Define las rutas y sus vistas asociadas
 const routes = {
-  '/': Home,          // Ruta principal
-  '/panel': Panel,    // Ruta para el panel
-  '/pilot': Pilot,    // Ruta para el piloto
-  '/apikey': ApiKey,  // Ruta para la API Key
-  '/error': ErrorView, // Ruta para la vista de error
+  '/': Home,          
+  '/panel': Panel,    
+  '/pilot': Pilot,    
+  '/apikey': ApiKey,  
+  '/error': ErrorView, 
 };
 
 // Obtiene el elemento raíz del contenedor en el DOM

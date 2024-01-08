@@ -1,3 +1,4 @@
+
 const Navbar = () => {
   const nav = document.createElement("nav"); 
   nav.classList.add("navbar");
@@ -37,10 +38,11 @@ const Navbar = () => {
   </div>
   
   <div class="elementNav">
-  <button name="panelButton">Panel de Pilotos</button>
-  <button name="apikeyButton">Api Key</button>
-  </div>
+  <button class="panelButton" name="returnPanel">Panel de Pilotos</button>
+  <button class="apikeyButton" name="returnApikey">Api Key</button>
+</div>
   `
+
   return nav;
 }
 

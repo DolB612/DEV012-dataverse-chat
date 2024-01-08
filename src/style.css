@@ -39,6 +39,7 @@ body{
     margin-left: 20px;
     width: 130px;
     height: 38px;
+    cursor: pointer;
 }
 
 .title {
@@ -198,17 +199,18 @@ ul {
     padding: 10px;
 }
 
+.logoWhite {
+    margin-left: 20px;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+
 .elementNav {
     margin-right: 20px;
 }
 
-.logowhite {
-    margin-left: 20px;
-    width: 120px;
-    height: 35px;
-}
-
-[name="panelButton"] {
+.panelButton {
     background-color: #ffffff4c;
     color: var(--white-color);
     width: 140px;
@@ -220,12 +222,12 @@ ul {
     margin-right: 20px;
 }
 
-[name="panelButton"]:hover {
+.panelButton:hover {
     box-shadow: rgba(255, 255, 255, 0.515) 0px 0px 1px 1px;
     font-weight: bold;
 }
 
-[name="apikeyButton"] {
+.apikeyButton {
     background-color: var(--grey-blue);
     color: var(--white-color);
     width: 140px;
@@ -236,7 +238,7 @@ ul {
     font-size: 18px;
 }
 
-[name="apikeyButton"]:hover {
+.apikeyButton:hover {
     box-shadow: rgba(255, 255, 255, 0.515) 0px 0px 1px 1px;
     font-weight: bold;
 }
@@ -377,7 +379,7 @@ ul {
 .apiKeyButtonSave {
    background-color: var(--red-color);
     color: var(--white-color);
-    width: 140px;
+    width: 180px;
     height: 30px;
     border-radius: 10px;
     border: none;
@@ -387,24 +389,24 @@ ul {
 }
 
 .apiKeyButtonSave:hover {
-    box-shadow: rgba(255, 255, 255, 0.515) 0px 0px 1px 1px;
+    box-shadow: rgba(0, 0, 0, 0.542) 0px 0px 1px 1px;
     font-weight: bold;
 }
 
 .apiKeyButtonDelete {
     background-color: var(--grey-blue);
     color: var(--white-color);
-    width: 140px;
+    width: 180px;
     height: 30px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     font-size: 18px;
-    font-weight: bold;
 }
 
 .apiKeyButtonDelete:hover {
-    box-shadow: rgba(255, 255, 255, 0.515) 0px 0px 1px 1px;
+    box-shadow: rgba(255, 0, 0, 0.542) 0px 0px 1px 1px;    
+    font-weight: bold;
 }
 
 /* Media Querys*/ 

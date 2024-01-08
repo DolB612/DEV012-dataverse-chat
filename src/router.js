@@ -17,13 +17,6 @@ export const setRoutes = (newRoutesValue) => {
   
 }
 
-// Esto es opcional: 
-// const queryStringToObject = (queryString) => {
-//   // convert query string to URLSearchParams
-//   // convert URLSearchParams to an object
-//   // return the object
-// }
-
 const renderView = (pathname, props={}) => {
   const root = rootElement; // clear the root element
   root.innerHTML = ''; 

@@ -1,3 +1,5 @@
+import { navigateTo } from "../router.js"; 
+
 export const ErrorView = () => {
   const containerError = document.createElement("div");
   containerError.classList.add("containerError");
@@ -7,9 +9,15 @@ export const ErrorView = () => {
   <p class="textMessage">Nuestros ingenieros están trabajando en la pista digital para resolver cualquier problema técnico. 
   ¡Mientras tanto, mantén la calma en el pit y espera a que el semáforo digital te dé luz verde de nuevo!
   </p>
-  <a href="/">
+  
   <button class="errorButton">Volver a la carrera</button>
-  </a>
   `;
+
+  const errorReturn = containerError.querySelector('.errorButton');
+  errorReturn.addEventListener("click", function() {
+    const returnHome = `/`; 
+    navigateTo(returnHome); 
+  });
+
   return containerError;
 };

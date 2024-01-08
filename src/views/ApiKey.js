@@ -6,10 +6,10 @@ export const ApiKey = () => {
     containerApikey.classList.add("containerApikey");
 
     const contentApikey = document.createElement('div');
-    contentApikey.classList.add("contentApiKey");  // Agregado: Se añade la clase correcta
+    contentApikey.classList.add("contentApiKey");  
     contentApikey.innerHTML = `
-        <p class="apiKeyText">Administra la Api Key</p>
-        <input class="apiKeyInput" type="text" name="apiKey" placeholder="Ingrese su Api Key">
+        <p class="apiKeyText">Administra la API KEY</p>
+        <input class="apiKeyInput" type="text" name="apiKey" placeholder="Ingresa la Api Key">
         <div class="apiKeyButtons">
             <button class="apiKeyButtonSave" name="apiKeyButtonSave">Guardar</button>
             <button class="apiKeyButtonDelete" name="apiKeyButtonDelete">Eliminar</button>
