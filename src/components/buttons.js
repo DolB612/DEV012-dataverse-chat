@@ -1,6 +1,6 @@
 import { navigateTo } from "../router.js"; 
 
-const Buttons = (nav) => {
+const Buttons = () => {
     const containerButtons = document.createElement('div');
     containerButtons.classList.add("elementNav");
     containerButtons.innerHTML = `

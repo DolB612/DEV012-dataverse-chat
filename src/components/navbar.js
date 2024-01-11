@@ -1,4 +1,3 @@
-import { navigateTo } from "../router.js";
 import Buttons from "./buttons.js"; 
 
 const Navbar = () => {
@@ -39,23 +38,12 @@ const Navbar = () => {
       <button data-testid="button-clear">Eliminar</button>
     </div>
     
-    <div class="elementNav">
-      ${Buttons(nav).outerHTML}
-    </div>
+    <div class="elementNav"></div>
   `;
+const buttons = Buttons();
 
-const panelButton = nav.querySelector('.panelButton');
-const apikeyButton = nav.querySelector('.apikeyButton');
-
-panelButton.addEventListener("click", function() {
-  const panelPage = '/panel'; 
-  navigateTo(panelPage); 
-});
-
-apikeyButton.addEventListener("click", function() {
-  const apikeyPage = '/apikey'; 
-  navigateTo(apikeyPage); 
-});
+const elementNav = nav.querySelector('.elementNav');
+elementNav.appendChild(buttons);
 
 return nav;
 }
