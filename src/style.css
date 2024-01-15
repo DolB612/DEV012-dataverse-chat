@@ -345,6 +345,44 @@ ul {
     color: var(--red-color);
 }
 
+/* Panel Page */
+.contentChatGroup {
+    display: flex;
+    width: 100%;
+}
+
+.divContainerPilot {
+    background-color: cadetblue;
+    width: 60%;
+    height: 60vh;
+}
+
+.divChatOnPilot {
+    background-color: coral;
+    width: 40%;
+}
+
+.messageChatOnPilot {
+    background-color: var(--grey-verylight);
+    height: 70vh;
+}
+
+.inputChatOnPilot {
+    width: 70%;
+    height: 50px;
+    border: none;
+    background-color: var(--white-color);
+}
+
+.buttonChatOnPilot {
+    width: 30%;
+    height: 50px;
+    background-color: var(--grey-blue);
+    color: var(--white-color);
+    font-size: 18px; 
+    border-top-left-radius: 10px;
+}
+
 /*Vista ApiKey*/ 
 .contentApiKey {
     display: flex;

@@ -1,4 +1,4 @@
-import { navigateTo } from "../router.js"; 
+import { navigateTo } from "../router.js";
 
 const Card = (driver) => {
   const li = document.createElement("li");
@@ -23,11 +23,11 @@ const Card = (driver) => {
   return li;
 };
 
-// Función para redirigir a la vista 
+// Función para redirigir a la vista
 const redirectToDetailView = (driver) => {
   // URL a la que será redireccionado utilizando id unico
   const detailViewUrl = `/pilot`;
-  // Redirigir a la vista 
+  // Redirigir a la vista
   navigateTo(detailViewUrl, driver); // Utilizamos la función navigateTo del router
 };
 
