@@ -358,7 +358,7 @@ ul {
 }
 
 .divChatOnPilot {
-    background-color: coral;
+    background-color: var(--grey-verylight);
     width: 40%;
 }
 
@@ -367,15 +367,18 @@ ul {
     height: 70vh;
 }
 
+.contentInputButton {
+    display: flex;
+}
+
 .inputChatOnPilot {
-    width: 70%;
-    height: 50px;
+    width: 80%;
     border: none;
     background-color: var(--white-color);
 }
 
 .buttonChatOnPilot {
-    width: 30%;
+    width: 20%;
     height: 50px;
     background-color: var(--grey-blue);
     color: var(--white-color);

@@ -3,12 +3,12 @@ import Footer from "../components/footer.js";
 import { openIAapi } from "../lib/openIaApi.js";
 
 export const Pilot = (props) => {
-    const containerPilot = document.createElement('div');
-    containerPilot.classList.add("containerPilot");
+  const containerPilot = document.createElement("div");
+  containerPilot.classList.add("containerPilot");
 
-    const contentChat = document.createElement('main');
-    contentChat.classList.add("contentChat");
-    contentChat.innerHTML = `
+  const contentChat = document.createElement("main");
+  contentChat.classList.add("contentChat");
+  contentChat.innerHTML = `
         <section class="pilotInfo">
           <img src="${props.imageUrl}" class="chatImgPilot"/>
           <section class="nameDescription">
@@ -23,57 +23,66 @@ export const Pilot = (props) => {
         </section>
     `;
 
-    // ! localStorage:
-    // Verifica si el usuario tiene una API Key almacenada en el localStorage
-    const storedApiKey = localStorage.getItem('apiKey');
-    
-    if (!storedApiKey) {
-      alert("Para interactuar con el chat, primero ingresa tu API Key en la página correspondiente.");
-    } else {
-        // Obtén elementos relevantes del contenido del chat
-        const boxMessage = contentChat.querySelector('.boxMessage');
-        const inputMessage = contentChat.querySelector('input[name="boxchat"]');
-        const buttonSend = contentChat.querySelector('.buttonSend');
+  // ! localStorage:
+  // Verifica si el usuario tiene una API Key almacenada en el localStorage
+  const storedApiKey = localStorage.getItem("apiKey");
 
-        // Evento click del botón de enviar
-        buttonSend.addEventListener('click', () => {
-            const userMessage = inputMessage.value.trim();
-            
-            if (userMessage !== "") {
-                // Añade el mensaje del usuario al chat
-                boxMessage.innerHTML += `<p>${userMessage}</p>`;
+  if (!storedApiKey) {
+    alert(
+      "Para interactuar con el chat, primero ingresa tu API Key en la página correspondiente."
+    );
+  } else {
+    // Obtén elementos relevantes del contenido del chat
+    const boxMessage = contentChat.querySelector(".boxMessage");
+    const inputMessage = contentChat.querySelector('input[name="boxchat"]');
+    const buttonSend = contentChat.querySelector(".buttonSend");
 
-                // Llama a la API de OpenAI con la API Key del usuario
-                openIAapi(props.name, userMessage)
-                    .then((responseOpenAI) => {
-                        if (!responseOpenAI.ok) {
-                            throw new Error(`API request failed with status ${responseOpenAI.status}`);
-                        }
-                        return responseOpenAI.json();
-                    })
-                    .then((responseJSObject) => {
-                        if (responseJSObject.choices && responseJSObject.choices.length > 0) {
-                            const aiReply = responseJSObject.choices[0].message.content;
-                            if (aiReply.trim() !== "") {
-                                // Añade la respuesta de la AI al chat
-                                boxMessage.innerHTML += `<p>${aiReply}</p>`;
-                            } else {
-                                console.warn('La respuesta de la API de OpenAI está vacía.');
-                            }
-                        } else {
-                            console.warn('La respuesta de la API de OpenAI no tiene el formato esperado.');
-                        }
-                    })
-                    .catch((error) => {
-                        console.error('Error en la llamada a la API:', error);
-                    });
+    // Evento click del botón de enviar
+    buttonSend.addEventListener("click", () => {
+      const userMessage = inputMessage.value.trim();
 
-                inputMessage.value = ""; // Limpia el input después de enviar el mensaje
+      if (userMessage !== "") {
+        // Añade el mensaje del usuario al chat
+        boxMessage.innerHTML += `<p>${userMessage}</p>`;
+
+        // Llama a la API de OpenAI con la API Key del usuario
+        openIAapi(props.name, userMessage)
+          .then((responseOpenAI) => {
+            if (!responseOpenAI.ok) {
+              throw new Error(
+                `API request failed with status ${responseOpenAI.status}`
+              );
             }
-        });
-    }
+            return responseOpenAI.json();
+          })
+          .then((responseJSObject) => {
+            if (
+              responseJSObject.choices &&
+              responseJSObject.choices.length > 0
+            ) {
+              const aiReply = responseJSObject.choices[0].message.content;
+              if (aiReply.trim() !== "") {
+                // Añade la respuesta de la AI al chat
+                boxMessage.innerHTML += `<p>${aiReply}</p>`;
+              } else {
+                console.warn("La respuesta de la API de OpenAI está vacía.");
+              }
+            } else {
+              console.warn(
+                "La respuesta de la API de OpenAI no tiene el formato esperado."
+              );
+            }
+          })
+          .catch((error) => {
+            console.error("Error en la llamada a la API:", error);
+          });
 
-    containerPilot.append(Nav(), contentChat, Footer());
+        inputMessage.value = ""; // Limpia el input después de enviar el mensaje
+      }
+    });
+  }
 
-    return containerPilot;
-}
+  containerPilot.append(Nav(), contentChat, Footer());
+
+  return containerPilot;
+};
