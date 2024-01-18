@@ -28,14 +28,14 @@ export const Panel = (props) => {
   // contenedor para mensajes
   const messageChatOnPilot = document.createElement("div");
   messageChatOnPilot.classList.add("messageChatOnPilot");
-  
+
   // Crear un div para que contenga el input y el boton (pendiente):
   const contentInputButton = document.createElement("span");
   contentInputButton.classList.add("contentInputButton");
   // input para introducir preguntas
   const inputChatOnPilot = document.createElement("input");
   inputChatOnPilot.classList.add("inputChatOnPilot");
-  inputChatOnPilot.setAttribute("placeholder","Mensaje")
+  inputChatOnPilot.setAttribute("placeholder", "Mensaje");
   // botón para enviar mensajes
   const buttonChatOnPilot = document.createElement("button");
   buttonChatOnPilot.classList.add("buttonChatOnPilot");
@@ -43,43 +43,11 @@ export const Panel = (props) => {
   // Agregamos el boton e input a su contenedor
   contentInputButton.append(inputChatOnPilot, buttonChatOnPilot);
 
-  divChatOnPilot.append(
-    messageChatOnPilot,
-    contentInputButton
-  );
+  divChatOnPilot.append(messageChatOnPilot, contentInputButton);
 
   contentChatGroup.append(divContainerPilot, divChatOnPilot);
 
-
-
-  const dataPilots = [...data];
-
-  const tresPilots = dataPilots.slice(0,3);
-
-  const promises = tresPilots.map((pilot) => {
-    return openIAapi(pilot.name, "Hola ¿Quién eres?");
-  })
-
-  console.log(promises);
-
-  Promise.all(promises)
-  .then((resultado) => {
-    console.log(resultado);
-    const respuestas = resultado.map((respuesta) => {
-      return respuesta.json();
-    })
-    Promise.all(respuestas)
-    .then((datos) => {
-      console.log(datos);
-    })
-  })
-  .catch(error => console.log(`mensaje`));
-
-
-
-
-  // ! localStorage:
-
+  // ! Funcionalidad:
   // Verifica si el usuario tiene una API Key almacenada en el localStorage
   const apiKeyStored = localStorage.getItem("apiKey");
 
@@ -101,8 +69,12 @@ export const Panel = (props) => {
         // Añade el mensaje del usuario al chat
         messageChat.innerHTML += `<p>${messageUser}</p>`;
 
-        // Llama a la API de OpenAI con la API Key del usuario
-        openIAapi(props.name, messageUser)
+        // Ciclo para obtener todos los pilotos
+        const dataPilots = [...data];
+
+        for(let i = 0; i<dataPilots.length; i++) {
+          const pilot = dataPilots[i];
+          openIAapi(pilot.name, messageUser) 
           .then((responseOpenAI) => {
             if (!responseOpenAI.ok) {
               throw new Error(
@@ -133,9 +105,10 @@ export const Panel = (props) => {
             console.error("Error en la llamada a la API:", error);
           });
 
-        inputChat.value = ""; // Limpia el input después de enviar el mensaje
-      }
+        inputChat.value = "";
+        }
 
+      }
     });
   }
 
