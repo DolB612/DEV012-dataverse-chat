@@ -8,6 +8,8 @@
 
 body{
     background-color: var(--white-color);
+    width: 100vw;
+    height: 100vh;
 }
 
 :root {
@@ -196,7 +198,11 @@ ul {
     justify-content: space-between;
     align-items: center;
     background-color: var(--red-color);
-    padding: 10px;
+    padding: 10px; 
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 5%
 }
 
 .logoWhite {
@@ -291,9 +297,13 @@ ul {
 }
 
 /* Page Pilot */
-.contentChat {
-    background-color: var(--white-color);
+.containerPilot{
+    background-color: chartreuse;
+
 }
+/* .contentChat {
+    background-color: var(--white-color);
+} */
 
 .pilotInfo {
     display: flex;
@@ -322,12 +332,12 @@ ul {
     display: flex;
 }
 
-[name="boxchat"] {
+/* [name="boxchat"] {
     width: 100%;
     height: 50px;
     border: none;
     background-color: var(--white-color);
-}
+} */
 
 [placeholder="Mensaje"] {
     font-size: 18px;
@@ -389,34 +399,41 @@ ul {
 }
 
 /*Vista ApiKey*/ 
-.contentApiKey {
+.containerApikey {
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 200px; /* Adjust as needed */
+    align-items: center;
+    flex-direction: column;
+   
+   
 }
 
+ .contentApiKey {
+    display: flex;
+    flex-direction: column;   
+} 
+
 .apiKeyText {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;   
 }
 
 .apiKeyInput {
-    width: 40%;
+    width: 500px;
     height: 30px;
-    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid var(--grey-light);
     border-radius: 8px;
     font-size: 18px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 25px;
+    
 }
 
 .apiKeyButtons {
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 .apiKeyButtonSave {
