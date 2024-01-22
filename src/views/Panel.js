@@ -72,42 +72,30 @@ export const Panel = (props) => {
         // Ciclo para obtener todos los pilotos
         const dataPilots = [...data];
 
+        const promiseArray = [];
+
         for(let i = 0; i<dataPilots.length; i++) {
           const pilot = dataPilots[i];
-          openIAapi(pilot.name, messageUser) 
-          .then((responseOpenAI) => {
-            if (!responseOpenAI.ok) {
-              throw new Error(
-                `API request failed with status ${responseOpenAI.status}`
-              );
-            }
-            return responseOpenAI.json();
-          })
-          .then((responseJSObject) => {
-            if (
-              responseJSObject.choices &&
-              responseJSObject.choices.length > 0
-            ) {
-              const aiReply = responseJSObject.choices[0].message.content;
-              if (aiReply.trim() !== "") {
-                // Añade la respuesta de la AI al chat
-                messageChat.innerHTML += `<p>${aiReply}</p>`;
-              } else {
-                console.warn("La respuesta de la API de OpenAI está vacía.");
-              }
-            } else {
-              console.warn(
-                "La respuesta de la API de OpenAI no tiene el formato esperado."
-              );
-            }
-          })
-          .catch((error) => {
-            console.error("Error en la llamada a la API:", error);
-          });
-
-        inputChat.value = "";
+          const newPromise = openIAapi(pilot.name, messageUser);
+          promiseArray.push(newPromise);
         }
-
+        Promise.all(promiseArray)
+        .then(function (arrayJson){
+          console.log(arrayJson);
+          
+          const promiseArrayJson =[];
+          for(let i = 0; i<arrayJson.length; i++){
+            const obj = arrayJson[i].json();
+            promiseArrayJson.push(obj);
+          }
+          Promise.all(promiseArrayJson)
+          .then(function(response){
+            console.log(response);
+            
+            // Aquí debemos decirle que se inserten los mensajes en la vista
+          })
+        })
+        console.log("Esto es sync");
       }
     });
   }
