@@ -69,32 +69,31 @@ export const Panel = (props) => {
         // Añade el mensaje del usuario al chat
         messageChat.innerHTML += `<p>${messageUser}</p>`;
 
-        // Ciclo para obtener todos los pilotos
         const dataPilots = [...data];
-
         const promiseArray = [];
 
-        for(let i = 0; i<dataPilots.length; i++) {
+        // Iteramos cada piloto
+        for (let i = 0; i < dataPilots.length; i++) {
           const pilot = dataPilots[i];
           const newPromise = openIAapi(pilot.name, messageUser);
           promiseArray.push(newPromise);
         }
-        Promise.all(promiseArray)
-        .then(function (arrayJson){
+        // Convertirmos a .json
+        Promise.all(promiseArray).then(function (arrayJson) {
           console.log(arrayJson);
-          
-          const promiseArrayJson =[];
-          for(let i = 0; i<arrayJson.length; i++){
+
+          const promiseArrayJson = [];
+          for (let i = 0; i < arrayJson.length; i++) {
             const obj = arrayJson[i].json();
             promiseArrayJson.push(obj);
           }
-          Promise.all(promiseArrayJson)
-          .then(function(response){
+          // Agregar mensajes 
+          Promise.all(promiseArrayJson).then(function (response) {
             console.log(response);
+            // Aquí debemos agregar los mensajes a messageChat
             
-            // Aquí debemos decirle que se inserten los mensajes en la vista
-          })
-        })
+          });
+        });
         console.log("Esto es sync");
       }
     });
