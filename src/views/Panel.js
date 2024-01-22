@@ -4,7 +4,7 @@ import Footer from "../components/footer.js";
 import { openIAapi } from "../lib/openIaApi.js";
 import data from "../data/dataset.js";
 
-export const Panel = (props) => {
+export const Panel = () => {
   const containerPanel = document.createElement("div");
   containerPanel.classList.add("containerPanel");
 
@@ -80,8 +80,6 @@ export const Panel = (props) => {
         }
         // Convertirmos a .json
         Promise.all(promiseArray).then(function (arrayJson) {
-          console.log(arrayJson);
-
           const promiseArrayJson = [];
           for (let i = 0; i < arrayJson.length; i++) {
             const obj = arrayJson[i].json();
@@ -89,12 +87,16 @@ export const Panel = (props) => {
           }
           // Agregar mensajes 
           Promise.all(promiseArrayJson).then(function (response) {
-            console.log(response);
-            // Aquí debemos agregar los mensajes a messageChat
-            
+            // Agregamos la respuesta a messageChat
+            for(let i = 0; i<response.length; i++){
+              const htmlTemplate = `
+              <p>${response[i].choices[0].message.content}</p>
+              `
+              messageChat.innerHTML += htmlTemplate;
+            }
+            inputChat.value = ""; // Limpiamos input despues de obtener respuestas
           });
         });
-        console.log("Esto es sync");
       }
     });
   }
