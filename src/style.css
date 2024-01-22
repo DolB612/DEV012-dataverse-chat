@@ -201,8 +201,8 @@ ul {
     padding: 10px; 
     top: 0;
     position: absolute;
-    width: 100%;
-    height: 5%
+    width: 100vw;
+    height: 5vh;
 }
 
 .logoWhite {
@@ -299,6 +299,7 @@ ul {
 /* Page Pilot */
 .containerPilot{
     background-color: chartreuse;
+    margin-top: 5vh;
 
 }
 /* .contentChat {
