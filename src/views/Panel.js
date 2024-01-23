@@ -1,10 +1,9 @@
-// import data from '../data/dataset.js'
 import Nav from "../components/nav.js";
 import Footer from "../components/footer.js";
 import { openIAapi } from "../lib/openIaApi.js";
 import data from "../data/dataset.js";
 
-export const Panel = () => {
+export const Panel = (driver) => {
   const containerPanel = document.createElement("div");
   containerPanel.classList.add("containerPanel");
 
@@ -13,14 +12,24 @@ export const Panel = () => {
   contentChatGroup.classList.add("contentChatGroup");
 
   // 1 contenedor para los pilotos
-  const divContainerPilot = document.createElement("span");
+  const divContainerPilot = document.createElement("div");
   divContainerPilot.classList.add("divContainerPilot");
-  // Creando un mensaje como ejemplo
-  const text = document.createElement("h1");
-  const saludo = document.createTextNode("Hola, aquí van los pilotos");
-  text.appendChild(saludo);
+  const ulPanel = document.createElement("ul");
+  ulPanel.classList.add("ulPanel");
+  const liPanel = document.createElement("li");
+  liPanel.classList.add("liPanel");
+  liPanel.innerHTML = `
+          <section class="pilotInfo">
+          <img src="${driver.imageUrl}" class="chatImgPilot"/>
+          <section class="nameDescription">
+            <p class="name">${driver.name}</p>
+            <p class="shortDescription">${driver.shortDescription}</p>
+          </section>
+        </section>
+ `
+ ulPanel.appendChild(liPanel);
   // Agregamos al nodo padre el nodo hijo text con un mensaje
-  divContainerPilot.appendChild(text);
+  divContainerPilot.appendChild(ulPanel);
 
   // 2 contenedor padre para el chat
   const divChatOnPilot = document.createElement("div");
@@ -30,7 +39,7 @@ export const Panel = () => {
   messageChatOnPilot.classList.add("messageChatOnPilot");
 
   // Crear un div para que contenga el input y el boton (pendiente):
-  const contentInputButton = document.createElement("span");
+  const contentInputButton = document.createElement("div");
   contentInputButton.classList.add("contentInputButton");
   // input para introducir preguntas
   const inputChatOnPilot = document.createElement("input");
@@ -40,9 +49,10 @@ export const Panel = () => {
   const buttonChatOnPilot = document.createElement("button");
   buttonChatOnPilot.classList.add("buttonChatOnPilot");
   buttonChatOnPilot.innerHTML = "Enviar";
+  
   // Agregamos el boton e input a su contenedor
   contentInputButton.append(inputChatOnPilot, buttonChatOnPilot);
-
+  
   divChatOnPilot.append(messageChatOnPilot, contentInputButton);
 
   contentChatGroup.append(divContainerPilot, divChatOnPilot);

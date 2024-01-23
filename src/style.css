@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* border: solid 2px #f357aa; */
+    /* border: solid 2px #ee0ca3; */
 }
 
 body{
@@ -30,9 +30,10 @@ body{
 }
 
 /* Home */
-.container {
+/* .container {
     background-color: rgba(3, 255, 255, 0.539); 
-}
+} */
+
 
 .header {
     display: flex;
@@ -364,20 +365,24 @@ ul {
 
 /* Panel Page */
 .contentChatGroup {
+    background-color: blueviolet;
     display: flex;
     width: 100%;
+    height: 100vh;
 }
 
 .divContainerPilot {
     background-color: cadetblue;
     width: 60%;
     height: 60vh;
+    margin-top: 10vh;
 }
 
 .divChatOnPilot {
     background-color: var(--grey-verylight);
     width: 40%;
 }
+    
 
 .messageChatOnPilot {
     overflow-y: scroll;
@@ -387,6 +392,9 @@ ul {
 
 .contentInputButton {
     display: flex;
+    
+    
+    
 }
 
 .inputChatOnPilot {
