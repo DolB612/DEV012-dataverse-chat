@@ -304,13 +304,16 @@ ul {
 
 /* Page Pilot */
 .containerPilot{
-    background-color: chartreuse;
-    margin-top: 5vh;
+    margin-top: 10vh;
+    height: 80vh;
+    
 }
 
-.contentChat {
-    background-color: var(--white-color);
-}
+/* .contentChat {
+    
+    
+    
+} */
 
 .pilotInfo {
     display: flex;
@@ -332,7 +335,7 @@ ul {
     overflow-y: scroll;
     background-color: var(--grey-verylight);
     width: 100vw;
-    height: 338px;
+    height: 63vh;
 }
 
 .buttonMessage {
@@ -341,7 +344,7 @@ ul {
 
 [name="boxchat"] {
     width: 100vw;
-    height: 50px;
+    height: 60px;
     border: none;
     background-color: var(--white-color);
 }
@@ -365,17 +368,17 @@ ul {
 
 /* Panel Page */
 .contentChatGroup {
-    background-color: blueviolet;
     display: flex;
     width: 100%;
     height: 100vh;
 }
 
 .divContainerPilot {
-    background-color: cadetblue;
     width: 60%;
     height: 60vh;
     margin-top: 10vh;
+    overflow-y: scroll;
+    
 }
 
 .divChatOnPilot {

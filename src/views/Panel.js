@@ -4,6 +4,7 @@ import { openIAapi } from "../lib/openIaApi.js";
 import data from "../data/dataset.js";
 
 export const Panel = (driver) => {
+  console.log(driver);
   const containerPanel = document.createElement("div");
   containerPanel.classList.add("containerPanel");
 
@@ -16,7 +17,8 @@ export const Panel = (driver) => {
   divContainerPilot.classList.add("divContainerPilot");
   const ulPanel = document.createElement("ul");
   ulPanel.classList.add("ulPanel");
-  const liPanel = document.createElement("li");
+  data.forEach((driver) => {
+    const liPanel = document.createElement("li");
   liPanel.classList.add("liPanel");
   liPanel.innerHTML = `
           <section class="pilotInfo">
@@ -28,6 +30,8 @@ export const Panel = (driver) => {
         </section>
  `
  ulPanel.appendChild(liPanel);
+   }) 
+  
   // Agregamos al nodo padre el nodo hijo text con un mensaje
   divContainerPilot.appendChild(ulPanel);
 
