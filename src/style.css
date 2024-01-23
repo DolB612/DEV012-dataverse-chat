@@ -3,13 +3,13 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Titillium Web, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    /* border: solid 2px #f357aa; */
 }
 
 body{
     background-color: var(--white-color);
-    width: 100vw;
-    height: 100vh;
+    font-family: Titillium Web, Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -22,18 +22,23 @@ body{
     --grey-verylight: #ebebeb;
   }
 
+/* Root: revisar */
+#root {
+    overflow: auto;
+    width: 100vw;
+    height: 90vh;
+}
 
 /* Home */
 .container {
-    min-height: 100vh;
-    position: relative;
+    background-color: rgba(3, 255, 255, 0.539); 
 }
 
 .header {
     display: flex;
     align-items: center;
     background-color: var(--white-color);
-    height: 50px;
+    height: 10vh;
     padding: 5px;
 }
 
@@ -45,7 +50,7 @@ body{
 }
 
 .title {
-    margin: auto; /* Revisar - Ajustar con px */
+    margin: auto;
     color: var(--red-color);
     text-align: center;
     font-size: 35px;
@@ -71,16 +76,16 @@ body{
 /* Footer */
 .footer{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    font-size: 18px; 
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: var(--red-color);
-    color: var(--white-color);
-    height: 60px;
-    font-size: 18px;
-}
+    height: 4rem; 
+} 
 
 /* Cards */
 ul {
@@ -202,7 +207,7 @@ ul {
     top: 0;
     position: absolute;
     width: 100vw;
-    height: 5vh;
+    height: 10vh;
 }
 
 .logoWhite {
@@ -300,11 +305,11 @@ ul {
 .containerPilot{
     background-color: chartreuse;
     margin-top: 5vh;
-
 }
-/* .contentChat {
+
+.contentChat {
     background-color: var(--white-color);
-} */
+}
 
 .pilotInfo {
     display: flex;
@@ -325,7 +330,7 @@ ul {
 .boxMessage {
     overflow-y: scroll;
     background-color: var(--grey-verylight);
-    width: 100%;
+    width: 100vw;
     height: 338px;
 }
 
@@ -333,12 +338,12 @@ ul {
     display: flex;
 }
 
-/* [name="boxchat"] {
-    width: 100%;
+[name="boxchat"] {
+    width: 100vw;
     height: 50px;
     border: none;
     background-color: var(--white-color);
-} */
+}
 
 [placeholder="Mensaje"] {
     font-size: 18px;
@@ -422,7 +427,7 @@ ul {
 
 .apiKeyInput {
     width: 500px;
-    height: 30px;
+    height: 45px;
     padding: 10px;
     border: 1px solid var(--grey-light);
     border-radius: 8px;
