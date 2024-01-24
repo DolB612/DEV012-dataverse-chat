@@ -355,7 +355,7 @@ ul {
 /* Contenedor de imagenes de pilotos */
 .divContainerPilot {
     width: 60%;
-    height: 100vh;
+    height: 79vh;
     margin-top: 10vh;
     overflow-y: scroll;
     overflow: auto;
