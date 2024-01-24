@@ -43,7 +43,7 @@ export const Pilot = (props) => {
 
       if (userMessage !== "") {
         // Añade el mensaje del usuario al chat
-        boxMessage.innerHTML += `<p>${userMessage}</p>`;
+        boxMessage.innerHTML += `<p class="userMessage">${userMessage}</p>`;
 
         // Llama a la API de OpenAI con la API Key del usuario
         openIAapi(props.name, userMessage)
@@ -63,7 +63,7 @@ export const Pilot = (props) => {
               const aiReply = responseJSObject.choices[0].message.content;
               if (aiReply.trim() !== "") {
                 // Añade la respuesta de la AI al chat
-                boxMessage.innerHTML += `<p>${aiReply}</p>`;
+                boxMessage.innerHTML += `<p class="aiReply">${aiReply}</p>`;
               } else {
                 console.warn("La respuesta de la API de OpenAI está vacía.");
               }

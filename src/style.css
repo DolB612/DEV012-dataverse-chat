@@ -286,6 +286,34 @@ ul {
     height: 57vh;
 }
 
+/* Estilos para los mensajes del usuario */
+.boxMessage p.userMessage {
+    background-color: #dea9a9; 
+    color: rgb(9, 9, 9);
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 10px;
+    word-wrap: break-word;
+    text-align: left;
+    float: left;
+    clear: both;
+    
+}
+
+/* Estilos para las respuestas de la IA */
+.boxMessage p.aiReply {
+    background-color: #9babb0; 
+    color: rgb(12, 12, 12);
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 10px;
+    word-wrap: break-word;
+    text-align: right; 
+    float: right; /* Desplaza el contenedor hacia la derecha */
+    clear: both;
+    
+}
+
 .buttonMessage {
     display: flex;
 }
