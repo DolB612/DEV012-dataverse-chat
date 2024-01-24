@@ -20,12 +20,12 @@ export const Panel = () => {
     const liPanel = document.createElement("li");
     liPanel.classList.add("liPanel");
     liPanel.innerHTML = `
-          <section class="pilotInfo">
-          <img src="${driver.imageUrl}" class="chatImgPilot"/>
-          <section class="nameDescription">
-            <p class="name">${driver.name}</p>
-            <p class="shortDescription">${driver.shortDescription}</p>
-          </section>
+        <section class="infoPilot">
+        <img src="${driver.imageUrl}" class="imgPilotPanel"/>
+        <section class="descriptionName">
+          <p class="namePilotPanel">${driver.name}</p>
+          <p class="shortDescriptionPanel">${driver.shortDescription}</p>
+        </section>
         </section>
  `;
     ulPanel.appendChild(liPanel);
