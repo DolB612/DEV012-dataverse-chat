@@ -80,7 +80,7 @@ export const Panel = () => {
 
       if (messageUser !== "") {
         // Añade el mensaje del usuario al chat
-        messageChat.innerHTML += `<p>${messageUser}</p>`;
+        messageChat.innerHTML += `<p class = "messageUser">${messageUser}</p>`;
 
         const dataPilots = [...data];
         const promiseArray = [];
@@ -103,7 +103,7 @@ export const Panel = () => {
             // Agregamos la respuesta a messageChat
             for (let i = 0; i < response.length; i++) {
               const htmlTemplate = `
-              <p>${response[i].choices[0].message.content}</p>
+              <p class = "messageIA">${response[i].choices[0].message.content}</p>
               `;
               messageChat.innerHTML += htmlTemplate;
             }

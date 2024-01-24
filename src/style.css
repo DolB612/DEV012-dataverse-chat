@@ -284,6 +284,7 @@ ul {
     background-color: var(--grey-verylight);
     width: 100vw;
     height: 57vh;
+    padding: 10px;
 }
 
 /* Estilos para los mensajes del usuario */
@@ -293,6 +294,7 @@ ul {
     padding: 10px;
     border-radius: 8px;
     margin-left: 10px;
+    margin-bottom: 10px;
     word-wrap: break-word;
     text-align: left;
     float: left;
@@ -307,11 +309,11 @@ ul {
     padding: 10px;
     border-radius: 8px;
     margin-right: 10px;
+    margin-bottom: 10px;
     word-wrap: break-word;
     text-align: right; 
     float: right; /* Desplaza el contenedor hacia la derecha */
-    clear: both;
-    
+    clear: both;   
 }
 
 .buttonMessage {
@@ -411,13 +413,41 @@ ul {
     overflow-y: scroll;
     background-color: var(--grey-verylight);
     height: 70vh;
+    margin-top: 10px;
 }
+
+/* Estilos para mensaje usuario panel */
+.messageUser {
+    background-color: #dea9a9; 
+    color: rgb(9, 9, 9);
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    text-align: left; /* Alinea el texto a la izquierda para mensajes del usuario */
+    float: left;
+    clear: both;
+
+}
+
+.messageIA {
+    background-color: #9babb0; 
+    color: rgb(12, 12, 12);
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    text-align: right; /* Alinea el texto a la derecha para respuestas de la IA */
+    float: right; /* Desplaza el contenedor hacia la derecha */
+    clear: both;
+}
+
 
 .contentInputButton {
     display: flex;
-    
-    
-    
+      
 }
 
 .inputChatOnPilot {
@@ -441,9 +471,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-   
-   
+    flex-direction: column;  
 }
 
  .contentApiKey {
@@ -463,8 +491,7 @@ ul {
     border: 1px solid var(--grey-light);
     border-radius: 8px;
     font-size: 18px;
-    margin-top: 25px;
-    
+    margin-top: 25px;   
 }
 
 .apiKeyButtons {
