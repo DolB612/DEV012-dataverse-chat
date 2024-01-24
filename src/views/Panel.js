@@ -3,8 +3,7 @@ import Footer from "../components/footer.js";
 import { openIAapi } from "../lib/openIaApi.js";
 import data from "../data/dataset.js";
 
-export const Panel = (driver) => {
-  console.log(driver);
+export const Panel = () => {
   const containerPanel = document.createElement("div");
   containerPanel.classList.add("containerPanel");
 
@@ -19,8 +18,8 @@ export const Panel = (driver) => {
   ulPanel.classList.add("ulPanel");
   data.forEach((driver) => {
     const liPanel = document.createElement("li");
-  liPanel.classList.add("liPanel");
-  liPanel.innerHTML = `
+    liPanel.classList.add("liPanel");
+    liPanel.innerHTML = `
           <section class="pilotInfo">
           <img src="${driver.imageUrl}" class="chatImgPilot"/>
           <section class="nameDescription">
@@ -28,10 +27,10 @@ export const Panel = (driver) => {
             <p class="shortDescription">${driver.shortDescription}</p>
           </section>
         </section>
- `
- ulPanel.appendChild(liPanel);
-   }) 
-  
+ `;
+    ulPanel.appendChild(liPanel);
+  });
+
   // Agregamos al nodo padre el nodo hijo text con un mensaje
   divContainerPilot.appendChild(ulPanel);
 
@@ -53,10 +52,10 @@ export const Panel = (driver) => {
   const buttonChatOnPilot = document.createElement("button");
   buttonChatOnPilot.classList.add("buttonChatOnPilot");
   buttonChatOnPilot.innerHTML = "Enviar";
-  
+
   // Agregamos el boton e input a su contenedor
   contentInputButton.append(inputChatOnPilot, buttonChatOnPilot);
-  
+
   divChatOnPilot.append(messageChatOnPilot, contentInputButton);
 
   contentChatGroup.append(divContainerPilot, divChatOnPilot);
@@ -99,13 +98,13 @@ export const Panel = (driver) => {
             const obj = arrayJson[i].json();
             promiseArrayJson.push(obj);
           }
-          // Agregar mensajes 
+          // Agregar mensajes
           Promise.all(promiseArrayJson).then(function (response) {
             // Agregamos la respuesta a messageChat
-            for(let i = 0; i<response.length; i++){
+            for (let i = 0; i < response.length; i++) {
               const htmlTemplate = `
               <p>${response[i].choices[0].message.content}</p>
-              `
+              `;
               messageChat.innerHTML += htmlTemplate;
             }
             inputChat.value = ""; // Limpiamos input despues de obtener respuestas

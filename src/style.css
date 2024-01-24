@@ -19,21 +19,20 @@ body{
     --grey-blue: #15151E;
     --grey-color: #38383F;
     --grey-light: #999999;
-    --grey-verylight: #ebebeb;
+    --grey-verylight: #e3e1e1;
   }
 
 /* Root: revisar */
 #root {
     overflow: auto;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
 }
 
 /* Home */
-/* .container {
-    background-color: rgba(3, 255, 255, 0.539); 
-} */
-
+.container {
+    margin-bottom: 10vh;
+}
 
 .header {
     display: flex;
@@ -151,7 +150,7 @@ ul {
 }
 
 
-/* Navbar */
+/* Navbar (Home)*/
 .navbar{
     display: flex; 
     justify-content: space-around; /* Revisar */
@@ -198,7 +197,7 @@ ul {
 }
 
 
-/* Componente Nav */
+/* Componente Nav (Chats y error) */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -255,64 +254,13 @@ ul {
     font-weight: bold;
 }
 
-/* Error 404 Page */
-.containerError {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--grey-blue);
-    width: 100vw;
-    height: 100vh;
-}
-
-.titleError{
-    text-align: center;
-    color: var(--white-color);
-    font-size: 60px;
-}
-
-.subtitleError{
-    text-align: center;
-    color: var(--white-color);
-    font-size: 50px;
-}
-
-.textMessage {
-    width: 850px;
-    text-align: center;
-    color: var(--white-color);
-    font-size: 20px;
-    margin-top: 15px;
-}
-
-.errorButton {
-    background-color: var(--red-color);
-    color: var(--white-color);
-    border-color: var(--white-color);
-    font-size: 18px;
-    border-radius: 15px;
-    width: 250px;
-    margin-top: 30px;
-    cursor: pointer;
-}
-
-.errorButton:hover {
-    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.394);
-    font-weight: bold;
-}
-
 /* Page Pilot */
 .containerPilot{
     margin-top: 10vh;
-    height: 80vh;
-    
 }
 
 /* .contentChat {
-    
-    
-    
+    background-color: coral;
 } */
 
 .pilotInfo {
@@ -335,7 +283,7 @@ ul {
     overflow-y: scroll;
     background-color: var(--grey-verylight);
     width: 100vw;
-    height: 63vh;
+    height: 57vh;
 }
 
 .buttonMessage {
@@ -344,7 +292,7 @@ ul {
 
 [name="boxchat"] {
     width: 100vw;
-    height: 60px;
+    height: 45px;
     border: none;
     background-color: var(--white-color);
 }
@@ -367,23 +315,29 @@ ul {
 }
 
 /* Panel Page */
+
+/* Contenedor principal */
 .contentChatGroup {
     display: flex;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
+/* Contenedor de imagenes de pilotos */
 .divContainerPilot {
     width: 60%;
-    height: 60vh;
+    height: 100vh;
     margin-top: 10vh;
     overflow-y: scroll;
-    
+    overflow: auto;
 }
-
+/* Contenedor del chat */
 .divChatOnPilot {
     background-color: var(--grey-verylight);
     width: 40%;
+    margin-top: 10vh;
+    height: 80vh;
 }
     
 
@@ -486,17 +440,50 @@ ul {
     font-weight: bold;
 }
 
-/* Media Querys*/ 
-@media screen and (max-width: 600px){
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-    }
+/* Error 404 Page */
+.containerError {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--grey-blue);
+    height: 100vh;
+}
 
-    .computeStats {
-        height: auto;
-    } 
+.titleError{
+    text-align: center;
+    color: var(--white-color);
+    font-size: 60px;
+}
 
+.subtitleError{
+    text-align: center;
+    color: var(--white-color);
+    font-size: 50px;
+}
+
+.textMessage {
+    width: 850px;
+    text-align: center;
+    color: var(--white-color);
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.errorButton {
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border-color: var(--white-color);
+    font-size: 18px;
+    border-radius: 15px;
+    border-color: var(--red-color);
+    width: 250px;
+    height: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.errorButton:hover {
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.394);
+    font-weight: bold;
 }

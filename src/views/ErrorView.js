@@ -1,3 +1,4 @@
+import Nav from "../components/nav.js"
 import { navigateTo } from "../router.js"; 
 
 export const ErrorView = () => {
@@ -18,6 +19,8 @@ export const ErrorView = () => {
     const returnHome = `/`; 
     navigateTo(returnHome); 
   });
+
+  containerError.append(Nav());
 
   return containerError;
 };
