@@ -108,7 +108,7 @@ ul {
     text-align: center;
     width: 250px;
     margin: 43px;
-    /* margin-top: 25px;  */
+    margin-top: 35px; 
     overflow: hidden;
     color: var(--white-color);
     background-color: var(--grey-blue);
@@ -610,4 +610,165 @@ ul {
 .errorButton:hover {
     box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.394);
     font-weight: bold;
+}
+
+/* Media Querys */
+
+@media only screen and (max-width: 410px) {
+
+    /* Home */
+    .header img
+    {
+        margin: auto;
+    }
+    .header h1
+    {
+        display: none;
+    }
+
+    .computeStats p 
+    {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .list {
+        margin-top: -20px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .contentLabelSelect
+    {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1vh
+    }
+    .contentLabelSelect label 
+    {
+        font-size: 1.1rem;
+    }
+    .contentLabelSelect select 
+    {
+        font-size: 1.1rem;
+    }
+    .contentLabelSelect button 
+    {
+        font-size: 0.9rem;
+    }
+    .contentLabelSelect option 
+    {
+        font-size: 0.8rem;
+    }
+
+    .elementNav {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .elementNav button 
+    {
+        font-size: 0.9rem;
+    }
+
+    .footer{
+        font-size: 1rem;
+    }
+
+    /* Pilot */
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav img
+    {
+        width: 80px;
+    }
+
+    .elementNav{
+        display: flex;
+        min-width: 85%;
+    }
+
+    .elementNav button
+    {
+        width: 120px;
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .shortDescription {
+        font-size: 1rem;
+    }
+
+    [name="boxchat"] {
+        width: 70%;
+        height: 6.5vh;
+    }
+
+    .buttonSend{
+        width: 30%;
+    }
+
+    /* Panel */
+
+    .contentChatGroup {
+        height: 90vh;
+        justify-content: space-between;
+    }
+
+    .divContainerPilot{
+        width: 20%;
+    }
+    .descriptionName p
+    {
+        display: none;
+    }
+    
+    .divChatOnPilot{
+        width: 80%;
+    }
+
+    /* Api Key */
+
+    .apiKeyText{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .apiKeyInput{
+        width: 100%;
+    }
+
+    .apiKeyButtonSave {
+        width: 150px;
+        font-size: 1.2rem;
+    }
+
+    .apiKeyButtonDelete{
+        width: 150px;
+        font-size: 1.2rem;
+    }
+    
+    /* Error */
+    .textMessage{
+        width: 100%;
+        padding: 10px;
+    }
 }

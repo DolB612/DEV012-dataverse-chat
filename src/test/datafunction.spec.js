@@ -1,5 +1,5 @@
 import { filterData, sortData, computeStats } from "../src/dataFunctions.js";
-import { data as dataFake } from "../data/dataset.js"
+import { data as dataFake } from "../data/dataset.js";
 
 describe("filterData", () => {
   it("debe filtrar los pilotos por escudería - Williams", () => {
@@ -18,18 +18,20 @@ describe("filterData", () => {
   });
 });
 
-
 describe("sortData", () => {
   it("debe ordenar los pilotos de forma ascendente por nombre", () => {
     const sortedData = sortData(dataFake, "name", "asc");
-    expect(sortedData).toEqual([...dataFake].sort((a, b) => a.name.localeCompare(b.name)));
+    expect(sortedData).toEqual(
+      [...dataFake].sort((a, b) => a.name.localeCompare(b.name))
+    );
   });
   it("debe ordenar los pilotos de forma descendente por nombre", () => {
     const sortedData = sortData(dataFake, "name", "desc");
-    expect(sortedData).toEqual([...dataFake].sort((a, b) => b.name.localeCompare(a.name)));
+    expect(sortedData).toEqual(
+      [...dataFake].sort((a, b) => b.name.localeCompare(a.name))
+    );
   });
 });
-
 
 describe("computeStats", () => {
   it("debe calcular el promedio de podios correctamente", () => {

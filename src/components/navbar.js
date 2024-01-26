@@ -1,7 +1,7 @@
-import Buttons from "./buttons.js"; 
+import Buttons from "./buttons.js";
 
 const Navbar = () => {
-  const nav = document.createElement("nav"); 
+  const nav = document.createElement("nav");
   nav.classList.add("navbar");
   nav.innerHTML = `
     <div class="contentLabelSelect">
@@ -40,12 +40,12 @@ const Navbar = () => {
     
     <div class="elementNav"></div>
   `;
-const buttons = Buttons();
+  const buttons = Buttons();
 
-const elementNav = nav.querySelector('.elementNav');
-elementNav.appendChild(buttons);
+  const elementNav = nav.querySelector(".elementNav");
+  elementNav.appendChild(buttons);
 
-return nav;
-}
+  return nav;
+};
 
 export default Navbar;

@@ -16,7 +16,9 @@ export function sortData(data, sortBy, sortOrder) {
     // Si se está ordenando por "name"
     if (sortBy === "name") {
       // Ordena alfabéticamente de manera ascendente o descendente según el sortOrder
-      return sortOrder === "asc" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name);
+      return sortOrder === "asc"
+        ? a.name.localeCompare(b.name)
+        : b.name.localeCompare(a.name);
     }
     // Si no se está ordenando por "name", no se realiza ninguna modificación
     return 0;
@@ -26,8 +28,10 @@ export function sortData(data, sortBy, sortOrder) {
 // Función que calcula y devuelve el promedio de podiums en los datos dados
 export const computeStats = (data) => {
   // Extrae el número de podiums para cada objeto en los datos
-  const podiums = data.map((item) => item.extraInfo && item.extraInfo.podiums || 0);
-  
+  const podiums = data.map(
+    (item) => (item.extraInfo && item.extraInfo.podiums) || 0
+  );
+
   // Calcula el total de podiums y el promedio redondeado a dos decimales
   const totalPodiums = podiums.reduce((acc, podium) => acc + podium, 0);
   const averagePodiums = totalPodiums / data.length;

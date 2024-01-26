@@ -65,10 +65,10 @@ export const Pilot = (props) => {
                 // Añade la respuesta de la AI al chat
                 boxMessage.innerHTML += `<p class="aiReply">${aiReply}</p>`;
               } else {
-                console.warn("La respuesta de la API de OpenAI está vacía.");
+                console.log("La respuesta de la API de OpenAI está vacía.");
               }
             } else {
-              console.warn(
+              console.log(
                 "La respuesta de la API de OpenAI no tiene el formato esperado."
               );
             }

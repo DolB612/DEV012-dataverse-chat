@@ -1,5 +1,5 @@
-import Nav from "../components/nav.js"
-import { navigateTo } from "../router.js"; 
+import Nav from "../components/nav.js";
+import { navigateTo } from "../router.js";
 
 export const ErrorView = () => {
   const containerError = document.createElement("div");
@@ -14,10 +14,10 @@ export const ErrorView = () => {
   <button class="errorButton">Volver a la carrera</button>
   `;
 
-  const errorReturn = containerError.querySelector('.errorButton');
-  errorReturn.addEventListener("click", function() {
-    const returnHome = `/`; 
-    navigateTo(returnHome); 
+  const errorReturn = containerError.querySelector(".errorButton");
+  errorReturn.addEventListener("click", function () {
+    const returnHome = `/`;
+    navigateTo(returnHome);
   });
 
   containerError.append(Nav());
