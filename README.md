@@ -17,57 +17,51 @@
 
 🚀¡Prepárate para una experiencia única en el mundo de la F1!🏎️
 
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+![Home](https://github.com/rubiestram/DEV012-dataverse-chat/blob/main/home.png?raw=true)
+
 
 ## 2. Objetivos de Desarrollo
 Desarrollar una SPA, aplicar responsividad, implementar un router, integrar una API externa, entender la asincronía en JavaScript, despliegue en y crear pruebas unitarias. 
-
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
 
 
 ## 3. Prototipado
 _El diseño fue pensado para el beneficio del usuario._ Desde el diseño _Wireframe_ hasta el _Mockup de Alta Calidad_ fue diseñado en [Figma](https://www.figma.com/file/XisZyaBjGYAAi4VjlQj11E/Protoripado-de-dataverse-chat?type=design&node-id=0%3A1&mode=design&t=8u6FvxZCqgQoe6BU-1), ofrece una experiencia fluida con funciones intuitivas, navegación suave y adaptabilidad a dispositivos mobiles. 
 
-### Wireframe
+### Wireframe y Mockup de Alta Calidad
 
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
-
-### Mockup de Alta Calidad
-
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+![Prototipado](https://github.com/rubiestram/DEV012-dataverse-chat/blob/main/prototipado.png?raw=true)
 
 
 ## 4. Vistas y Funcionalidades
-
-**Vista principal**
 Al acceder, los usuarios son recibidos con una interfaz limpia y atractiva que presenta de manera destacada la información esencial sobre pilotos de Fórmula 1. Desde aquí, pueden explorar fácilmente, visualizar datos clave, y utilizar funciones de filtrado, ordenamiento, estadistica y acceso a las diferentes vistas de la aplicación para personalizar su experiencia. 
 
 El diseño intuitivo invita a los usuarios a sumergirse en el mundo de la F1, proporcionando una introducción accesible y atractiva a la riqueza de contenido que la aplicación tiene para ofrecer.
 
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+**Vista principal**
+
+![Home](https://github.com/rubiestram/DEV012-dataverse-chat/blob/main/home.png?raw=true)
 
 **Vista API KEY** 
 
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
-
+![Apikey](https://github.com/rubiestram/DEV012-dataverse-chat/blob/main/ApiKey.png?raw=true)
 
 **Vista Chat Personalizado** 
 
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+![ChatIndividual](https://github.com/rubiestram/DEV012-dataverse-chat/blob/main/ChatPersonalizado.png?raw=true)
 
 **Vista Panel - Chat Colectivo** 
 
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+![ChatGrupal](https://github.com/rubiestram/DEV012-dataverse-chat/blob/main/ChatColectivo.png?raw=true)
 
 **Vista Error 404** 
 
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+![Preview app](https://github.com/rubiestram/DEV012-dataverse-chat/blob/main/error.png?raw=true)
 
 
 ## 5. Testing
 En el desarrollo, la implementación de pruebas unitarias es una práctica esencial para garantizar la calidad y confiabilidad del código. 
 
-![Preview app](https://github-production-user-asset-6210df.s3.amazonaws.com/123121338/271433237-2bd1477b-15ef-49d4-9fcb-226b3263c46a.png)
+![Test](https://testing.png)
 
 
 ## 6. Tecnologías
