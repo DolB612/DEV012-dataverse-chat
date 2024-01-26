@@ -19,7 +19,6 @@ export const setRoutes = (newRoutesValue) => {
 const renderView = (pathname, props = {}) => {
   const root = rootElement; // clear the root element
   root.innerHTML = "";
-  console.log(pathname);
   // find the correct view in ROUTES for the pathname
   if (ROUTES[pathname]) {
     const template = ROUTES[pathname](props);

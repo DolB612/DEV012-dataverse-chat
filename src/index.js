@@ -28,5 +28,4 @@ setRootElement(containerRoot);
 // Establece el elemento raíz y maneja el cambio de URL al cargar la página
 window.addEventListener("DOMContentLoaded", (event) => {
   onURLChange(event.currentTarget.location.pathname, {});
-  console.log(event.currentTarget.location.pathname);
 });
