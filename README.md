@@ -25,7 +25,7 @@ Desarrollar una SPA, aplicar responsividad, implementar un router, integrar una 
 
 
 ## 3. Prototipado
-_El diseño fue pensado para el beneficio del usuario._ Desde el diseño _Wireframe_ hasta el _Mockup de Alta Calidad_ fue diseñado en [Figma](https://www.figma.com/file/XisZyaBjGYAAi4VjlQj11E/Protoripado-de-dataverse-chat?type=design&node-id=0%3A1&mode=design&t=8u6FvxZCqgQoe6BU-1), ofrece una experiencia fluida con funciones intuitivas, navegación suave y adaptabilidad a dispositivos mobiles. 
+_El diseño fue pensado para el beneficio del usuario._ Desde el diseño _Wireframe_ hasta el _Mockup de Alta Calidad_ fue diseñado en [Figma](https://www.figma.com/file/XisZyaBjGYAAi4VjlQj11E/Protoripado-de-dataverse-chat?type=design&node-id=0%3A1&mode=design&t=8u6FvxZCqgQoe6BU-1), ofrece una experiencia fluida con funciones intuitivas, navegación suave y adaptabilidad a dispositivos móviles. 
 
 ### Wireframe y Mockup de Alta Calidad
 
